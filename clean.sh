@@ -1,2 +1,4 @@
 docker-compose down
-rm -rf ./client/dist
+rm -rf ./client/new-york/dist
+rm -rf ./client/denver/dist
+

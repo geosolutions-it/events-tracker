@@ -1,0 +1,29 @@
+version: '2.2'
+services:
+  postgres:
+    ports:
+      - "2345:5432"
+    image: postgis/postgis:12-3.1
+    restart: unless-stopped
+    volumes:
+      - ./sql/new-york.csv:/home/new-york.csv
+      - ./sql/new-york.sql.gz:/docker-entrypoint-initdb.d/new-york.sql.gz
+    env_file:
+      - .env
+  geoserver:
+    ports:
+      - "8888:8080"
+    image: geosolutionsit/geoserver:C205
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    user: ${CURRENT_UID}
+    volumes:
+      - ./datadir:/var/geoserver/datadir
+      - ./datadir/new-york/workspaces/new-york:/var/geoserver/datadir/workspaces/new-york
+      - ./client/dist:/usr/local/tomcat/webapps/new-york
+      - ./data:/var/geoserver/data
+      - ./logs:/var/geoserver/logs
+    env_file:
+      - .env
+

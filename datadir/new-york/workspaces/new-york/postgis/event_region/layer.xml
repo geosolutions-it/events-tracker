@@ -1,0 +1,17 @@
+<layer>
+  <name>event_region</name>
+  <id>LayerInfoImpl-3b65c4a4:1791cef0a96:-5a43</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-78ff667e:12476299803:-7ffa</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-3b65c4a4:1791cef0a96:-5a44</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 13:52:49.200 UTC</dateCreated>
+  <dateModified>2021-11-30 16:33:45.665 UTC</dateModified>
+</layer>

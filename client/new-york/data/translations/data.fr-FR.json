@@ -1,0 +1,85 @@
+{
+    "locale": "fr-FR",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Crimes",
+            "cancel": "Annuler",
+            "errorInit": "Erreur de connexion",
+            "categories": {
+                "all": "Tous les crimes",
+                "burglary": "Cambriolage",
+                "murder": "Meurtre",
+                "grandLarceny": "Grand larcin",
+                "robbery": "Vol",
+                "felonyAssault": "Agression criminelle",
+                "grandLarcenyOfMotorVehicle": "Grand larcin de véhicule à moteur"
+            },
+            "featureTypeName": "Circonscriptions",
+            "feature": "Circonscription",
+            "featureKey": "pct",
+            "tableRowName": " ",
+            "pct": "Circonscription",
+            "featureGroups": {
+                "group-1": "Manhattan",
+                "group-2": "Bronx",
+                "group-3": "Brooklyn",
+                "group-4": "Queens",
+                "group-5": "Staten Island"
+            },
+            "mapVisualizations": {
+                "feature": "Plan du quartier",
+                "hexagon": "Carte de la criminalité de densité (hexagone)",
+                "square": "Carte de la criminalité de densité (carrée)",
+                "location": "Carte de localisation de la criminalité"  
+            },
+            "prompts": {
+                "dateFrom": "De:",
+                "dateTo": "À:",
+                "selectFeature": "Sélectionnez les quartiers...",
+                "normalBy": "Normaliser par :",
+                "normalByArea": "Crimes au kilomètre carré",
+                "normalByNone": "Rien",
+                "normalByPop": "Crimes pour 1000 habitants",
+                "population": "Population",
+                "switchToLight": "Passer à la lumière",
+                "switchToDark": "Passer à l'obscurité"
+            },
+            "labels": {
+                "count": "Compter",
+                "month": "Mois",
+                "builtWith": "Construit avec",
+                "time": "Temps",
+                "table": "Tableau",
+                "detail": "Détail",
+                "barChartTitle": "Circonscription versus arrondissement",
+                "barChartDescription": "Tableau comparatif",
+                "mapTitle": "NYC Carte de la criminalité",
+                "mapVisualizationTitle": "Type de carte",
+                "countersTitle": "Type de délit",
+                "chartTitle": "Graphique",
+                "featuresPanelTitle": "Informations sur les circonscriptions",
+                "emptyPanel": "Aucune donnée disponible",
+                "emptyCounters": "Aucune donnée disponible",
+                "emptyChart": "Aucune donnée disponible",
+                "selectFeatures": "Il n'y a pas de quartier sélectionné, veuillez sélectionner un quartier dans la zone de saisie ci-dessus pour visualiser les détails"
+            },
+            "download": {
+                "readmeDesc": "Décrit le contenu du téléchargement",
+                "baseLayerDesc": "Polygones de circonscription GeoJSON",
+                "aggregatedLayerDesc": "Circonscriptions GeoJSON avec comptage des crimes",
+                "aggregatedDataDesc": "CSV : nombre de crimes par circonscription.",
+                "timeseriesDataDesc": "CSV : nombre de crimes par circonscription et par mois",
+                "download": "Télécharger",
+                "options": "Options de téléchargement :",
+                "fileName": "nyc-carte-criminalite"
+            },
+            "error": {
+                "init": "Erreur lors de la connexion au service configuré. Veuillez vérifier la configuration",
+                "counters": "Erreur de connexion au point de terminaison des compteurs",
+                "chart": "Erreur de connexion au point de terminaison du graphique",
+                "table": "Erreur de connexion au point de terminaison de la table",
+                "details": "Erreur de connexion au point de terminaison des détails"
+            }
+        }
+    }
+}

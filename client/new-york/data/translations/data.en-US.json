@@ -1,0 +1,85 @@
+{
+    "locale": "en-US",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Crimes",
+            "cancel": "Cancel",
+            "errorInit": "Connection Error",
+            "categories": {
+                "all": "All Crimes",
+                "burglary": "Burglary",
+                "murder": "Murder and Non-Negligent Homicide",
+                "grandLarceny": "Grand Larceny",
+                "robbery": "Robbery",
+                "felonyAssault": "Felony Assault",
+                "grandLarcenyOfMotorVehicle": "Grand Larceny of Motor Vehicle"
+            },
+            "featureTypeName": "Precincts",
+            "feature": "Precinct",
+            "featureKey": "name",
+            "tableRowName": " ",
+            "region_name": "Precinct",
+            "featureGroups": {
+                "group-1": "Manhattan",
+                "group-2": "Bronx",
+                "group-3": "Brooklyn",
+                "group-4": "Queens",
+                "group-5": "Staten Island"
+            },
+            "mapVisualizations": {
+                "feature": "Precinct Map",
+                "hexagon": "Density Crime Map (hexagon)",
+                "square": "Density Crime Map (square)",
+                "location": "Crime Location Map"    
+            },
+            "prompts": {
+                "dateFrom": "From:",
+                "dateTo": "To:",
+                "selectFeature": "Select precincts...",
+                "normalBy": "Normalize by:",
+                "normalByArea": "Crimes per square kilometer",
+                "normalByNone": "None",
+                "normalByPop": "Crimes per 1,000 residents",
+                "switchToLight": "Switch to light",
+                "switchToDark": "Switch to dark"
+            },
+            "labels": {
+                "count": "Count",
+                "month": "Month",
+                "builtWith": "Built with",
+                "time": "Time",
+                "table": "Table",
+                "detail": "Detail",
+                "barChartTitle": "Precinct versus Borough",
+                "barChartDesctiption": "comparison chart",
+                "mapTitle": "NYC Crime Map",
+                "mapVisualizationTitle": "Map type",
+                "countersTitle": "Crime type",
+                "chartTitle": "Chart",
+                "featuresPanelTitle": "Precincts info",
+                "emptyPanel": "No data available",
+                "emptyCounters": "No data available",
+                "population": "Population",
+                "emptyChart": "No data available",
+                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details"
+            },
+            "download": {
+                "readmeDesc": "Describes the contents of the download",
+                "baseLayerDesc": "GeoJSON precinct polygons",
+                "aggregatedLayerDesc": "GeoJSON precincts with crime counts",
+                "aggregatedDataDesc": "CSV crime counts by precinct",
+                "timeseriesDataDesc": "CSV crime counts by precinct and month",
+                "download": "Download",
+                "options": "Download options:",
+                "fileName": "nyc-crime-map"
+            },
+            "error": {
+                "init": "Error while connecting to the configured service. Please check the configuration",
+                "counters": "Connection error to counters endpoint",
+                "chart": "Connection error to chart endpoint",
+                "requestErrorTable": "Connection error to table endpoint",
+                "details": "Connection error to details endpoint"
+            }
+        }
+    }
+}

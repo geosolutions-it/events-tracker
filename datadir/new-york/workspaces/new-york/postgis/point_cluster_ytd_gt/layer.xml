@@ -1,0 +1,17 @@
+<layer>
+  <name>point_cluster_ytd_gt</name>
+  <id>LayerInfoImpl--4d7238db:1797aed5dc7:-3751</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-78ff667e:12476299803:-7ff9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4d7238db:1797aed5dc7:-3752</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-05-17 15:32:45.4 UTC</dateCreated>
+  <dateModified>2021-05-17 16:16:54.616 UTC</dateModified>
+</layer>

@@ -1,0 +1,78 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4d7238db:1797aab36ca:-7ffe</id>
+  <name>event_full</name>
+  <nativeName>event_full</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-545c742b:17918a8a8e1:-7fe4</id>
+  </namespace>
+  <title>event_full</title>
+  <abstract>event locations with full information about region and group</abstract>
+  <keywords>
+    <string>features</string>
+    <string>event_full</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>-74.2543768</minx>
+    <maxx>-73.7007174</maxx>
+    <miny>40.50020694</miny>
+    <maxy>40.91271403</maxy>
+    <crs>EPSG:4326</crs>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-74.2543768</minx>
+    <maxx>-73.7007174</maxx>
+    <miny>40.50020694</miny>
+    <maxy>40.91271403</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>event_full</name>
+        <sql>select &#xd;
+event.id as id,&#xd;
+event.the_geom, &#xd;
+event.type, &#xd;
+event.month, &#xd;
+event.region_name, &#xd;
+region.population as region_population,&#xd;
+region.group_name&#xd;
+from newyork.event event&#xd;
+full join newyork.region region&#xd;
+on event.region_name = region.name
+</sql>
+        <escapeSql>false</escapeSql>
+        <keyColumn>id</keyColumn>
+        <geometry>
+          <name>the_geom</name>
+          <type>Point</type>
+          <srid>4326</srid>
+        </geometry>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-545c742b:17918a8a8e1:-7fe3</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

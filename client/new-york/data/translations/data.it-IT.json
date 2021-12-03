@@ -1,0 +1,85 @@
+{
+    "locale": "it-IT",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Crimini",
+            "cancel": "Annulla",
+            "errorInit": "Errore di Connessione",
+            "categories": {
+                "all": "Tutti i Crimini",
+                "burglary": "Furto con Scasso",
+                "murder": "Omicidio",
+                "grandLarceny": "Furto Aggravato",
+                "robbery": "Rapina",
+                "felonyAssault": "Aggressione Criminale",
+                "grandLarcenyOfMotorVehicle": "Furto Aggravato di Veicoli a Motore"
+            },
+            "featureTypeName": "Distretti",
+            "feature": "Distretto",
+            "featureKey": "pct",
+            "tableRowName": " ",
+            "pct": "Distretto",
+            "featureGroups": {
+                "group-1": "Manhattan",
+                "group-2": "Bronx",
+                "group-3": "Brooklyn",
+                "group-4": "Queens",
+                "group-5": "Staten Island"
+            },
+            "mapVisualizations": {
+                "feature": "Mappa dei distretti",
+                "hexagon": "Mappa della densità di criminalità (esagono)",
+                "square": "Mappa della densità di criminalità (quadrato)",
+                "location": "Mappa della posizione dei crimini"    
+            },
+            "prompts": {
+                "dateFrom": "Da:",
+                "dateTo": "A:",
+                "selectFeature": "Seleziona distretti...",
+                "normalBy": "Normalizzare per:",
+                "normalByArea": "Crimini per chilometro quadrato",
+                "normalByNone": "Nessuna",
+                "normalByPop": "Crimini per 1000 residenti",
+                "population": "Popolazione",
+                "switchToLight": "Passa alla luce",
+                "switchToDark": "Passa al buio"
+            },
+            "labels": {
+                "count": "Conteggio",
+                "month": "Mese",
+                "builtWith": "Costruito con",
+                "time": "Tempo",
+                "table": "Tabella",
+                "detail": "Dettaglio",
+                "barChartTitle": "Distretto contro Quartiere",
+                "barChartDescription": "Tabella di confronto",
+                "mapTitle": "NYC Mappa dei Crimini",
+                "mapVisualizationTitle": "Tipo di mappa",
+                "countersTitle": "Tipo di crimine",
+                "chartTitle": "Grafico",
+                "featuresPanelTitle": "Informazioni sui distretti",
+                "emptyPanel": "Nessun dato disponibile",
+                "emptyCounters": "Nessun dato disponibile",
+                "emptyChart": "Nessun dato disponibile",
+                "selectFeatures": "Non ci sono distretti selezionati, seleziona un distretto nel campo qui sopra per visualizzare i dettagli"
+            },
+            "download": {
+                "readmeDesc": "Descrive il contenuto del download",
+                "baseLayerDesc": "GeoJSON poligoni di distretto",
+                "aggregatedLayerDesc": "GeoJSON distretti con i conteggi dei crimini",
+                "aggregatedDataDesc": "CSV conteggio dei crimini per distretto",
+                "timeseriesDataDesc": "I conteggi dei crimini in CSV per distretto e mese",
+                "download": "Scarica",
+                "options": "Opzioni di download:",
+                "fileName": "nyc-mappa-crimini"
+            },
+            "error": {
+                "init": "Errore durante la connessione al servizio configurato. Verificare la configurazione",
+                "counters": "Errore di connessione all'endpoint dei contatori",
+                "chart": "Errore di connessione all'endpoint del grafico",
+                "table": "Errore di connessione all'endpoint della tabella",
+                "details": "Errore di connessione all'endpoint dei dettagli"
+            }
+        }
+    }
+}

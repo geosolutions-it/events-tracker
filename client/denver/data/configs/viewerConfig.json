@@ -1,0 +1,451 @@
+{
+    "title": "Denver - Crime Map",
+    "url": "/geoserver/wfs",
+    "featureTypeName": "denver:crime_location",
+    "defaultChartColor": "#0a5796",
+    "categories": [
+        {
+            "labelId": "msEventsTracker.categories.murder",
+            "value": "murder",
+            "color": "#9e0142"
+        },
+        {
+            "labelId": "msEventsTracker.categories.public-disorder",
+            "value": "public-disorder",
+            "color": "#e2524a"
+        },
+        {
+            "labelId": "msEventsTracker.categories.arson",
+            "value": "arson",
+            "color": "#f57647"
+        },
+        {
+            "labelId": "msEventsTracker.categories.robbery",
+            "value": "robbery",
+            "color": "#fca55d"
+        },
+        {
+            "labelId": "msEventsTracker.categories.other-crimes-against-persons",
+            "value": "other-crimes-against-persons",
+            "color": "#fecb79"
+        },
+        {
+            "labelId": "msEventsTracker.categories.aggravated-assault",
+            "value": "aggravated-assault",
+            "color": "#fee99a"
+        },
+        {
+            "labelId": "msEventsTracker.categories.traffic-accident",
+            "value": "traffic-accident",
+            "color": "#ffffbf"
+        },
+        {
+            "labelId": "msEventsTracker.categories.burglary",
+            "value": "burglary",
+            "color": "#edf8a3"
+        },
+        {
+            "labelId": "msEventsTracker.categories.auto-theft",
+            "value": "auto-theft",
+            "color": "#cdeb9d"
+        },
+        {
+            "labelId": "msEventsTracker.categories.larceny",
+            "value": "larceny",
+            "color": "#a1d9a4"
+        },
+        {
+            "labelId": "msEventsTracker.categories.white-collar-crime",
+            "value": "white-collar-crime",
+            "color": "#70c6a5"
+        },
+        {
+            "labelId": "msEventsTracker.categories.drug-alcohol",
+            "value": "drug-alcohol",
+            "color": "#48a1b3"
+        },
+        {
+            "labelId": "msEventsTracker.categories.all-other-crimes",
+            "value": "all-other-crimes",
+            "color": "#3f78b5"
+        },
+        {
+            "labelId": "msEventsTracker.categories.theft-from-motor-vehicle",
+            "value": "theft-from-motor-vehicle",
+            "color": "#5e4fa2"
+        }
+    ],
+    "category": {
+        "key": "type",
+        "type": "string"
+    },
+    "date": {
+        "key": "mo",
+        "type": "number",
+        "format": "YYYYMM"
+    },
+    "feature": {
+        "key": "pct",
+        "labelKey": "pct",
+        "type": "string",
+        "layer": {
+            "key": "pct",
+            "type": "vector",
+            "url": "/geoserver/wfs",
+            "params": {
+                "service": "WFS",
+                "typeName": "denver:precincts",
+                "version": "1.1.0",
+                "request": "GetFeature",
+                "outputFormat": "application/json"
+            }
+        }
+    },
+    "mapVisualizations": [
+        {
+            "id": "precinct",
+            "labelId": "msEventsTracker.mapVisualizations.feature",
+            "normalized": true,
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "pct"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "crime_count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "denver:crimes_precint_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "type": "scaleQuantile",
+                        "domain": "crime_count",
+                        "domainExtent": false,
+                        "normalize": true,
+                        "normalizePropertyKey": "normalizedCount",
+                        "range": "OrRd",
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "#000000",
+                        "opacity": 0.25,
+                        "weight": 1
+                    },
+                    "viewParamsMap": {
+                        "from": "min_mo",
+                        "to": "max_mo",
+                        "category": "crime_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "name"
+                            },
+                            {
+                                "key": "crime_count",
+                                "labelId": "msEventsTracker.dataPoints"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "title": true,
+                        "fields": [
+                            {
+                                "key": "crime_count",
+                                "labelId": "msEventsTracker.dataPoints"
+                            },
+                            {
+                                "key": "pop",
+                                "labelId": "msEventsTracker.prompts.population",
+                                "target": "feature"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "hex-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.hexagon",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "i",
+                            "j"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "denver:hex_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleQuantile",
+                        "domain": "count",
+                        "domainExtent": false,
+                        "range": "viridis",
+                        "rangeClasses": 12,
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "crime_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "square-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.square",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "denver:square_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleQuantile",
+                        "domain": "count",
+                        "domainExtent": false,
+                        "range": "spectral",
+                        "rangeClasses": 10,
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "crime_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "point-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.location",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "maxResolution": 20,
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "denver:point_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleLinear",
+                        "domain": "count",
+                        "domainExtent": true,
+                        "range": [
+                            2,
+                            32
+                        ],
+                        "stylePropertyKey": "radius"
+                    },
+                    "style": {
+                        "fillColor": "#33aaff",
+                        "fillOpacity": 0.8,
+                        "color": "#000000",
+                        "opacity": 1,
+                        "weight": 0.2,
+                        "radius": 10
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "crime_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "minResolution": 20,
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "denver:point_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json",
+                        "viewparams": "r:0.015;"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleLinear",
+                        "domain": "count",
+                        "domainExtent": true,
+                        "range": [
+                            2,
+                            16
+                        ],
+                        "stylePropertyKey": "radius"
+                    },
+                    "style": {
+                        "fillColor": "#33aaff",
+                        "fillOpacity": 0.8,
+                        "color": "#000000",
+                        "opacity": 1,
+                        "weight": 0.4,
+                        "radius": 10
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "normalizerOptions": [
+        {
+            "labelId": "msEventsTracker.prompts.normalByPop",
+            "value": "pop",
+            "params": {
+                "multiplier": 1000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        },
+        {
+            "labelId": "msEventsTracker.prompts.normalByArea",
+            "value": "area",
+            "params": {
+                "multiplier": 1000000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        }
+    ]
+}

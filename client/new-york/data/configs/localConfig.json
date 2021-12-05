@@ -30,7 +30,12 @@
                 "name": "Header",
                 "cfg": {
                     "titleId": "msEventsTracker.labels.mapTitle",
-                    "logo": []
+                    "logo": [
+                        {
+                            "href": "https://www.geosolutionsgroup.com/",
+                            "src": "assets/img/geosolutions-logo-sm.png"
+                        }
+                    ]
                 }
             },
             {
@@ -188,7 +193,12 @@
                 "name": "Header",
                 "cfg": {
                     "titleId": "msEventsTracker.labels.mapTitle",
-                    "logo": []
+                    "logo": [
+                        {
+                            "href": "https://www.geosolutionsgroup.com/",
+                            "src": "assets/img/geosolutions-logo.png"
+                        }
+                    ]
                 }
             },
             {

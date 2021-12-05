@@ -1,0 +1,113 @@
+{
+  "version": 2,
+  "map": {
+    "projection": "EPSG:900913",
+    "units": "m",
+    "center": {
+      "x": -104.8706813906251,
+      "y": 39.765798128118696,
+      "crs": "EPSG:4326"
+    },
+    "zoom": 10,
+    "maxExtent": [
+      -20037508.34,
+      -20037508.34,
+      20037508.34,
+      20037508.34
+    ],
+    "layers": [
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm_simple_dark",
+        "opacity": 1,
+        "title": "OSM Simple Dark",
+        "thumbURL": "assets/img/osm-simple-dark.jpg",
+        "type": "wms",
+        "url": [
+          "https://maps6.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm_simple_dark",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Simple Dark | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm_simple_light",
+        "opacity": 1,
+        "title": "OSM Simple Light",
+        "thumbURL": "assets/img/osm-simple-light.jpeg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm_simple_light",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Simple Light | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm",
+        "opacity": 0.4,
+        "title": "OSM Bright",
+        "thumbURL": "assets/img/osm-bright.jpg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm",
+        "visibility": true,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Bright | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "s2cloudless:s2cloudless",
+        "opacity": 1,
+        "title": "Sentinel 2 Cloudless",
+        "thumbURL": "assets/img/s2cloudless.jpeg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "s2cloudless",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "<a class=\"a-light\" xmlns:dct=\"http://purl.org/dc/terms/\" href=\"https://s2maps.eu\" property=\"dct:title\">Sentinel-2 cloudless 2016</a> by <a class=\"a-light\" xmlns:cc=\"http://creativecommons.org/ns#\" href=\"https://eox.at\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">EOX IT Services GmbH</a>"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-1992c2ac:17d8b7e257c:-7ff8</id>
+  <name>crimes_precint_gt</name>
+  <nativeName>crimes_precint_gt</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-545c742b:17918a8a8e1:-7fe4</id>
+  </namespace>
+  <title>crimes_precint_gt</title>
+  <keywords>
+    <string>crimes_precint_gt</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-105.109967079733</minx>
+    <maxx>-104.59958100425462</maxx>
+    <miny>39.614311407818604</miny>
+    <maxy>39.914178470967556</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-105.109967079733</minx>
+    <maxx>-104.59958100425462</maxx>
+    <miny>39.614311407818604</miny>
+    <maxy>39.914178470967556</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>crimes_precint_gt</name>
+        <sql>SELECT&#xd;
+  p.gid,&#xd;
+  p.geom,&#xd;
+  p.boro,&#xd;
+  p.pop,&#xd;
+  p.pct,&#xd;
+  c.type,&#xd;
+  COALESCE(c.crime_count, 0)::bigint AS crime_count&#xd;
+FROM (&#xd;
+    SELECT COUNT(*) as crime_count, type, pct&#xd;
+    FROM denver.crime_location&#xd;
+    WHERE type IN (%crime_type%)&#xd;
+          AND mo BETWEEN %min_mo% AND %max_mo%&#xd;
+    GROUP BY pct, type&#xd;
+  ) c&#xd;
+  FULL JOIN denver.crime_precinct p ON p.pct = c.pct
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>max_mo</name>
+          <defaultValue>202201</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>min_mo</name>
+          <defaultValue>201901</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>crime_type</name>
+          <defaultValue>&apos;auto-theft&apos;, &apos;other-crimes-against-persons&apos;, &apos;aggravated-assault&apos;, &apos;burglary&apos;, &apos;theft-from-motor-vehicle&apos;, &apos;larceny&apos;, &apos;all-other-crimes&apos;, &apos;murder&apos;, &apos;arson&apos;, &apos;robbery&apos;, &apos;drug-alcohol&apos;, &apos;traffic-accident&apos;, &apos;public-disorder&apos;, &apos;white-collar-crime&apos;</defaultValue>
+          <regexpValidator>^(&apos;[\w\s\-]+&apos;\s*,?\s*)+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1c2cc594:17d8b73cf17:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

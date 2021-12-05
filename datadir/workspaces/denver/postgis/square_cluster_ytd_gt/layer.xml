@@ -1,0 +1,16 @@
+<layer>
+  <name>square_cluster_ytd_gt</name>
+  <id>LayerInfoImpl-55a06bc7:17d8b959f5b:-7ff3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-79c3ffa6:17d819d0785:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-55a06bc7:17d8b959f5b:-7ff4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-12-05 17:33:50.943 UTC</dateCreated>
+</layer>

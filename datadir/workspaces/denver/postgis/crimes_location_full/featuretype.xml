@@ -1,0 +1,61 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-1992c2ac:17d8b7e257c:-7ffc</id>
+  <name>crimes_location_full</name>
+  <nativeName>crimes_location_full</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-545c742b:17918a8a8e1:-7fe4</id>
+  </namespace>
+  <title>crimes_location_full</title>
+  <keywords>
+    <string>features</string>
+    <string>crimes_location_full</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-115.46406024342605</minx>
+    <maxx>5.31335274E-7</maxx>
+    <miny>3.6333461E-8</miny>
+    <maxy>39.90431048809313</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-115.46406024342605</minx>
+    <maxx>5.31335274E-7</maxx>
+    <miny>3.6333461E-8</miny>
+    <maxy>39.90431048809313</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>crimes_location_full</name>
+        <sql>SELECT&#xd;
+  location.gid,&#xd;
+  location.geom,&#xd;
+  location.type,&#xd;
+  location.mo,&#xd;
+  location.pct as pct,&#xd;
+  precint.pop as precint_pop,&#xd;
+  location.boro as boro&#xd;
+FROM denver.crime_location location&#xd;
+FULL JOIN denver.crime_precinct precint&#xd;
+ON location.pct = precint.pct
+</sql>
+        <escapeSql>false</escapeSql>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1c2cc594:17d8b73cf17:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

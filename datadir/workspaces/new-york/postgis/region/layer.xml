@@ -1,0 +1,16 @@
+<layer>
+  <name>region</name>
+  <id>LayerInfoImpl-11151b98:17d871ea28e:-7fec</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-79c3ffa6:17d819d0785:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-11151b98:17d871ea28e:-7fed</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-12-04 20:40:37.464 UTC</dateCreated>
+</layer>

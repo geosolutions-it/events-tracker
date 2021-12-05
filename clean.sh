@@ -1,4 +1,7 @@
 docker-compose down
-rm -rf ./client/new-york/dist
-rm -rf ./client/denver/dist
-
+cd client
+apps=(*/)
+for app in "${apps[@]}"; 
+do 
+  rm -rf $app/dist
+done

@@ -1,0 +1,366 @@
+{
+    "proxyUrl": {
+        "url": "proxy/?url=",
+        "useCORS": []
+    },
+    "translationsPath": [
+        "ms-translations",
+        "translations",
+        "ov-translations"
+    ],
+    "initialState": {
+        "defaultState": {
+            "locales": {
+                "supportedLocales": {
+                    "en": {
+                        "code": "en-US",
+                        "description": "English"
+                    }
+                }
+            }
+        }
+    },
+    "extensionsRegistry": "configs/extensions.json",
+    "plugins": {
+        "map-view": [
+            {
+                "name": "ViewerLayout",
+                "cfg": {
+                    "disableFullscreen": true
+                }
+            },
+            {
+                "name": "Header",
+                "cfg": {
+                    "logo": [
+                        {
+                            "href": "https://www.geosolutionsgroup.com/",
+                            "src": "assets/img/geosolutions-logo-sm.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Map",
+                "cfg": {
+                    "shouldLoadFont": false
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "MapInteraction",
+                "cfg": {
+                    "disablePointerMove": true
+                }
+            },
+            {
+                "name": "Menu"
+            },
+            {
+                "name": "Share"
+            },
+            {
+                "name": "ThemeVariantSwitch"
+            },
+            {
+                "name": "Download"
+            },
+            {
+                "name": "DateFilter"
+            },
+            {
+                "name": "Counters"
+            },
+            {
+                "name": "Chart"
+            },
+            {
+                "name": "Normalizer"
+            },
+            {
+                "name": "FeaturesPanel"
+            },
+            {
+                "name": "OverlayPanel"
+            },
+            {
+                "name": "MapVisualization"
+            },
+            {
+                "name": "VectorLegend"
+            },
+            {
+                "name": "Toolbar",
+                "id": "NavigationBar",
+                "cfg": {
+                    "id": "navigationBar"
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "ZoomIn",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "ZoomOut",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "Search",
+                "cfg": {
+                    "showCoordinatesSearchOption": false,
+                    "showOptions": false,
+                    "searchOptions": {
+                        "services": [
+                            {
+                                "type": "wfs",
+                                "name": "Precincts",
+                                "displayName": "${properties.pct} Precinct",
+                                "priority": 1,
+                                "options": {
+                                    "url": "/geoserver/wfs",
+                                    "typeName": "denver:precincts",
+                                    "queriableAttributes": [
+                                        "pct"
+                                    ],
+                                    "sortBy": "pct",
+                                    "maxFeatures": 15,
+                                    "srsName": "EPSG:4326",
+                                    "maxZoomLevel": 27
+                                }
+                            }
+                        ]
+                    },
+                    "withToggle": [
+                        "max-width: 0px",
+                        "min-width: 0px"
+                    ],
+                    "resultsStyle": {
+                        "iconUrl": "assets/img/marker-search.svg",
+                        "shadowUrl": "assets/img/marker-shadow.png",
+                        "iconSize": [
+                            25,
+                            41
+                        ],
+                        "iconAnchor": [
+                            12,
+                            41
+                        ],
+                        "popupAnchor": [
+                            1,
+                            -34
+                        ],
+                        "shadowSize": [
+                            41,
+                            41
+                        ],
+                        "color": "#f2f2f2",
+                        "weight": 3,
+                        "dashArray": "4 8",
+                        "fillColor": "#333333",
+                        "fillOpacity": 0.2
+                    }
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "DataAttribution",
+                "cfg": {
+                    "href": "https://www.denvergov.org/opendata/search"
+                }
+            }
+        ],
+        "dashboard-view": [
+            {
+                "name": "ViewerLayout"
+            },
+            {
+                "name": "Header",
+                "cfg": {
+                    "titleId": "msEventsTracker.labels.mapTitle",
+                    "logo": [
+                        {
+                            "href": "https://www.geosolutionsgroup.com/",
+                            "src": "assets/img/geosolutions-logo.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Map",
+                "cfg": {
+                    "shouldLoadFont": false
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "MapVisualization"
+            },
+            {
+                "name": "MapInteraction"
+            },
+            {
+                "name": "VectorLegend"
+            },
+            {
+                "name": "Footer"
+            },
+            {
+                "name": "Chart"
+            },
+            {
+                "name": "FeaturesPanel"
+            },
+            {
+                "name": "Normalizer"
+            },
+            {
+                "name": "Counters",
+                "cfg": {
+                    "scrollBarEnabled": true
+                }
+            },
+            {
+                "name": "Menu"
+            },
+            {
+                "name": "Share"
+            },
+            {
+                "name": "ThemeVariantSwitch"
+            },
+            {
+                "name": "Download"
+            },
+            {
+                "name": "DateFilter"
+            },
+            {
+                "name": "Toolbar",
+                "id": "NavigationBar",
+                "cfg": {
+                    "id": "navigationBar"
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "ZoomIn",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "ZoomOut",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "Search",
+                "cfg": {
+                    "showCoordinatesSearchOption": false,
+                    "showOptions": false,
+                    "searchOptions": {
+                        "services": [
+                            {
+                                "type": "wfs",
+                                "name": "Precincts",
+                                "displayName": "${properties.pct} Precinct",
+                                "priority": 1,
+                                "options": {
+                                    "url": "/geoserver/wfs",
+                                    "typeName": "denver:precincts",
+                                    "queriableAttributes": [
+                                        "pct"
+                                    ],
+                                    "sortBy": "pct",
+                                    "maxFeatures": 15,
+                                    "srsName": "EPSG:4326",
+                                    "maxZoomLevel": 27
+                                }
+                            }
+                        ]
+                    },
+                    "withToggle": [
+                        "max-width: 0px",
+                        "min-width: 0px"
+                    ],
+                    "resultsStyle": {
+                        "iconUrl": "assets/img/marker-search.svg",
+                        "shadowUrl": "assets/img/marker-shadow.png",
+                        "iconSize": [
+                            25,
+                            41
+                        ],
+                        "iconAnchor": [
+                            12,
+                            41
+                        ],
+                        "popupAnchor": [
+                            1,
+                            -34
+                        ],
+                        "shadowSize": [
+                            41,
+                            41
+                        ],
+                        "color": "#f2f2f2",
+                        "weight": 3,
+                        "dashArray": "4 8",
+                        "fillColor": "#333333",
+                        "fillOpacity": 0.2
+                    }
+                },
+                "override": {
+                    "ViewerLayout": {
+                        "target": "center",
+                        "priority": 1
+                    }
+                }
+            },
+            {
+                "name": "DataAttribution",
+                "cfg": {
+                    "href": "https://www.denvergov.org/opendata/search"
+                }
+            }
+        ]
+    }
+}

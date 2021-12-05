@@ -1,0 +1,97 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-55a06bc7:17d8b959f5b:-7ff6</id>
+  <name>square_cluster_ytd</name>
+  <nativeName>square_cluster_ytd</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-545c742b:17918a8a8e1:-7fe4</id>
+  </namespace>
+  <title>square_cluster_ytd</title>
+  <keywords>
+    <string>features</string>
+    <string>square_cluster_ytd</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-105.2085</minx>
+    <maxx>0.0015</maxx>
+    <miny>-0.0015</miny>
+    <maxy>39.9045</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-105.2085</minx>
+    <maxx>0.0015</maxx>
+    <miny>-0.0015</miny>
+    <maxy>39.9045</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>square_cluster_ytd</name>
+        <sql>SELECT&#xd;
+  count(1) count,&#xd;
+  x_round,&#xd;
+  y_round,&#xd;
+  ST_MakePolygon(st_makeline(&#xd;
+    ARRAY[&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round - %r% / 2),&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round + %r% / 2),&#xd;
+	    ST_MakePoint(x_round + %r% / 2, y_round + %r% / 2),&#xd;
+	    ST_MakePoint(x_round + %r% / 2, y_round - %r% / 2),&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round - %r% / 2)&#xd;
+    ]&#xd;
+ )) AS geom &#xd;
+FROM (&#xd;
+  SELECT&#xd;
+    geom,&#xd;
+    ST_X(geom) AS x,&#xd;
+    ST_Y(geom) AS y,&#xd;
+    round(ST_X(geom) / %r%) * %r% AS x_round,&#xd;
+    round(ST_Y(geom) / %r%) * %r% AS y_round&#xd;
+  FROM&#xd;
+    denver.crime_location &#xd;
+  WHERE&#xd;
+   mo BETWEEN %mo_min% AND %mo_max%&#xd;
+   AND type IN (%crime_type%)&#xd;
+   :where_clause:&#xd;
+) agg GROUP BY x_round, y_round
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>r</name>
+          <defaultValue>0.003</defaultValue>
+          <regexpValidator>^[\d\.]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>crime_type</name>
+          <defaultValue>&apos;auto-theft&apos;, &apos;other-crimes-against-persons&apos;, &apos;aggravated-assault&apos;, &apos;burglary&apos;, &apos;theft-from-motor-vehicle&apos;, &apos;larceny&apos;, &apos;all-other-crimes&apos;, &apos;murder&apos;, &apos;arson&apos;, &apos;robbery&apos;, &apos;drug-alcohol&apos;, &apos;traffic-accident&apos;, &apos;public-disorder&apos;, &apos;white-collar-crime&apos;</defaultValue>
+          <regexpValidator>^(&apos;[\w\s\-]+&apos;\s*,?\s*)+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_min</name>
+          <defaultValue>201912</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_max</name>
+          <defaultValue>202201</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1c2cc594:17d8b73cf17:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

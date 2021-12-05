@@ -1,14 +1,15 @@
-apps=( "new-york" )
-for i in ${!apps[@]};
+docker-compose down
+cd client
+apps=(*/)
+for app in "${apps[@]}"; 
 do
-  app=${apps[$i]}
-if [ ! -d ./client/$app/dist ]
-then
-  mapstore=$(grep -oP '(?<="mapstore-events-tracker": ")[^"]*' client/$app/package.json)
-  echo building $app from mapstore-events-tracker $mapstore
-  cd client/$app
-  ./build.sh
-  cd ../../
-fi
+  if [ ! -d ./client/$app/dist ]
+  then
+    echo building mapstore-events-tracker ${app::-1}
+    cd $app
+    ./build.sh
+    cd ../
+  fi
 done
+cd ../
 CURRENT_UID=$(id -u):$(id -g) docker-compose up

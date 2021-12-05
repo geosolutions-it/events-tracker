@@ -1,0 +1,17 @@
+<layer>
+  <name>hex_cluster_ytd</name>
+  <id>LayerInfoImpl-3b65c4a4:1791cef0a96:-5777</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-79c3ffa6:17d819d0785:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-3b65c4a4:1791cef0a96:-5778</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-04-29 15:49:24.455 UTC</dateCreated>
+  <dateModified>2021-12-05 17:54:19.247 UTC</dateModified>
+</layer>

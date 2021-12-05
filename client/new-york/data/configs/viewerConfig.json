@@ -50,8 +50,8 @@
         "type": "string",
         "group": "group_name",
         "layer": {
-        "key": "name",
-        "type": "vector",
+            "key": "name",
+            "type": "vector",
             "url": "/geoserver/wfs",
             "params": {
                 "service": "WFS",

@@ -52,7 +52,7 @@
                 "detail": "Detail",
                 "barChartTitle": "Precinct versus Borough",
                 "barChartDesctiption": "comparison chart",
-                "mapTitle": "NYC Crime Map",
+                "mapTitle": " New York - Crime Map",
                 "mapVisualizationTitle": "Map type",
                 "countersTitle": "Crime type",
                 "chartTitle": "Chart",
@@ -61,7 +61,8 @@
                 "emptyCounters": "No data available",
                 "population": "Population",
                 "emptyChart": "No data available",
-                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details"
+                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details",
+                "dataAttribution": "Data from New York Open Data Catalog"
             },
             "download": {
                 "readmeDesc": "Describes the contents of the download",

@@ -1,0 +1,85 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-1992c2ac:17d8b7e257c:-7ff6</id>
+  <name>hex_cluster_ytd</name>
+  <nativeName>hex_cluster_ytd</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-545c742b:17918a8a8e1:-7fe4</id>
+  </namespace>
+  <title>hex_cluster_ytd</title>
+  <keywords>
+    <string>features</string>
+    <string>hex_cluster_ytd</string>
+  </keywords>
+  <srs>EPSG:404000</srs>
+  <nativeBoundingBox>
+    <minx>-105.114</minx>
+    <maxx>-104.65350000000001</maxx>
+    <miny>39.61026991829266</miny>
+    <maxy>39.90645060638694</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-105.114</minx>
+    <maxx>-104.65350000000001</maxx>
+    <miny>39.61026991829266</miny>
+    <maxy>39.90645060638694</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>hex_cluster_ytd</name>
+        <sql>SELECT count(1),&#xd;
+  hexes.i,&#xd;
+  hexes.j,&#xd;
+  hexes.geom&#xd;
+FROM&#xd;
+  (SELECT ST_SetSRID(geom, 4326) AS geom, i, j&#xd;
+  FROM ST_HexagonGrid(%r%, ST_MakeEnvelope(-105.109, 39.614, -104.56, 39.914))) as hexes&#xd;
+       INNER JOIN&#xd;
+         (SELECT * &#xd;
+          FROM denver.crime_location &#xd;
+          WHERE mo BETWEEN %mo_min% and %mo_max%&#xd;
+          AND type IN (%crime_type%)&#xd;
+          :where_clause:) AS complaints&#xd;
+  ON ST_intersects(hexes.geom, complaints.geom)&#xd;
+GROUP BY hexes.i, hexes.j, hexes.geom
+</sql>
+        <escapeSql>false</escapeSql>
+        <parameter>
+          <name>r</name>
+          <defaultValue>0.003</defaultValue>
+          <regexpValidator>^[\d\.]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>crime_type</name>
+          <defaultValue>&apos;auto-theft&apos;, &apos;other-crimes-against-persons&apos;, &apos;aggravated-assault&apos;, &apos;burglary&apos;, &apos;theft-from-motor-vehicle&apos;, &apos;larceny&apos;, &apos;all-other-crimes&apos;, &apos;murder&apos;, &apos;arson&apos;, &apos;robbery&apos;, &apos;drug-alcohol&apos;, &apos;traffic-accident&apos;, &apos;public-disorder&apos;, &apos;white-collar-crime&apos;</defaultValue>
+          <regexpValidator>^(&apos;[\w\s\-]+&apos;\s*,?\s*)+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_min</name>
+          <defaultValue>201912</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_max</name>
+          <defaultValue>202201</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-1c2cc594:17d8b73cf17:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -2,10 +2,22 @@
     "locale": "en-US",
     "messages": {
         "msEventsTracker": {
+            "dataPoints": "Crimes",
+            "featureTypeName": "Precincts",
+            "feature": "Precinct",
+            "region_name": "Precinct",
             "labels": {
-                "mainTitle": "Denver - Crime Map",
+                "mapTitle": "Denver - Crime Map",
                 "barChartTitle": "Precincts",
+                "countersTitle": "Crime type",
+                "featuresPanelTitle": "Precincts info",
+                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details",
                 "dataAttribution": "Data from Denver Open Data Catalog"
+            },
+            "prompts": {
+                "selectFeature": "Select precincts...",
+                "normalByArea": "Crimes per square kilometer",
+                "normalByPop": "Crimes per 1,000 residents",
             },
             "categories": {
                 "murder": "Murder",

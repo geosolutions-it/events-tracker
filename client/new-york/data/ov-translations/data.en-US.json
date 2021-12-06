@@ -1,0 +1,54 @@
+{
+    "locale": "en-US",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Crimes",
+            "featureTypeName": "Precincts",
+            "feature": "Precinct",
+            "tableRowName": " ",
+            "region_name": "Precinct",
+            "featureGroups": {
+                "group-1": "Manhattan",
+                "group-2": "Bronx",
+                "group-3": "Brooklyn",
+                "group-4": "Queens",
+                "group-5": "Staten Island"
+            },
+            "labels": {
+                "mapTitle": " New York - Crime Map",
+                "barChartTitle": "Precinct versus Borough",
+                "countersTitle": "Crime type",
+                "featuresPanelTitle": "Precincts info",
+                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details",
+                "dataAttribution": "Data from New York Open Data Catalog"
+            },
+            "prompts": {
+                "selectFeature": "Select precincts...",
+                "normalByArea": "Crimes per square kilometer",
+                "normalByPop": "Crimes per 1,000 residents",
+            },
+            "categories": {
+                "all": "All Crimes",
+                "burglary": "Burglary",
+                "murder": "Murder and Non-Negligent Homicide",
+                "grandLarceny": "Grand Larceny",
+                "robbery": "Robbery",
+                "felonyAssault": "Felony Assault",
+                "grandLarcenyOfMotorVehicle": "Grand Larceny of Motor Vehicle"
+            },
+            "mapVisualizations": {
+                "feature": "Precinct Map",
+                "hexagon": "Density Crime Map (hexagon)",
+                "square": "Density Crime Map (square)",
+                "location": "Crime Location Map"    
+            },
+            "download": {
+                "baseLayerDesc": "GeoJSON precinct polygons",
+                "aggregatedLayerDesc": "GeoJSON precincts with crime counts",
+                "aggregatedDataDesc": "CSV crime counts by precinct",
+                "timeseriesDataDesc": "CSV crime counts by precinct and month",
+                "fileName": "nyc-crime-map"
+            }
+        }
+    }
+}

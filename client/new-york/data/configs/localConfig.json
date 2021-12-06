@@ -4,8 +4,9 @@
         "useCORS": []
     },
     "translationsPath": [
+        "ms-translations",
         "translations",
-        "ms-translations"
+        "ov-translations"
     ],
     "extensionsRegistry": "configs/extensions.json",
     "mapConstraints": {

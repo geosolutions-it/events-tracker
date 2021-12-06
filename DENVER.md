@@ -27,7 +27,7 @@ This layer is a SQL view based on the ``crime_precints`` function. It accepts th
 
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'BURGLARY', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
+* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'auto-theft', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
 
 ### hex_cluster_ytd
 
@@ -40,7 +40,7 @@ This layer is a SQL view and accepts the following variables:
 * ``r``: the hexagon radius, defaults to ``0.003`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'BURGLARY', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
+* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'auto-theft', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
 
 ### point_cluster_ytd
 
@@ -53,7 +53,7 @@ This layer is a SQL view and accepts the following variables:
 * ``r``: the cell width, defaults to ``0.005`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'BURGLARY', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
+* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'auto-theft', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
 
 ### square_cluster_ytd
 
@@ -66,7 +66,10 @@ This layer is a SQL view and accepts the following variables:
 * ``r``: the cell width, defaults to ``0.005`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to ``'BURGLARY', 'FELONY ASSAULT', 'GRAND LARCENY', 'GRAND LARCENY OF MOTOR VEHICLE', 'MURDER', 'RAPE', 'ROBBERY'``.
+* ``crime_type``: comma separated list of crime types, expressed as SQL strings. Defaults to 
+```
+'auto-theft', 'other-crimes-against-persons', 'aggravated-assault', 'burglary', 'theft-from-motor-vehicle', 'larceny', 'all-other-crimes', 'murder', 'arson', 'robbery', 'drug-alcohol', 'traffic-accident', 'public-disorder', 'white-collar-crime'
+```
 
 ### "_gt" views
 
@@ -83,9 +86,9 @@ This poses a challenge if one of the parameter values requires to use a comma. F
 
 Here is an example viewparam:
 
-``viewparams=mo_min:202012;mo_max:202101;crime_type:%27BURGLARY%27%5C,%27FELONY%20ASSAULT%27``
+``viewparams=mo_min:202012;mo_max:202101;crime_type:%27auto-theft%27%5C,%27robbery%27``
 
 It sets the following values:
 * ``mo_min``: ``202012``
 * ``mo_max``: ``202101``
-* ``crime_type``: ``'BURGLARY', 'FELONY ASSAULT'``
+* ``crime_type``: ``'auto-theft', 'robbery'``

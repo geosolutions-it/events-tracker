@@ -25,8 +25,7 @@ Before downloading we must filter the data to the specific complaint types our c
 
     ![export](img/export.png)
 
-- Copy the downloaded file to the project root
-- Rename the file to ``event.csv``
+- Copy the downloaded file to ``./sql/new-york.csv``
 
 
 

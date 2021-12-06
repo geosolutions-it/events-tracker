@@ -15,7 +15,7 @@
                 "group-5": "Staten Island"
             },
             "labels": {
-                "mapTitle": " New York - Crime Map",
+                "pageTitle": " New York - Crime Map",
                 "barChartTitle": "Precinct versus Borough",
                 "countersTitle": "Crime type",
                 "featuresPanelTitle": "Precincts info",
@@ -25,7 +25,7 @@
             "prompts": {
                 "selectFeature": "Select precincts...",
                 "normalByArea": "Crimes per square kilometer",
-                "normalByPop": "Crimes per 1,000 residents",
+                "normalByPop": "Crimes per 1,000 residents"
             },
             "categories": {
                 "all": "All Crimes",

@@ -7,7 +7,7 @@
             "feature": "Precinct",
             "region_name": "Precinct",
             "labels": {
-                "mapTitle": "Denver - Crime Map",
+                "pageTitle": "Denver - Crime Map",
                 "barChartTitle": "Precincts",
                 "countersTitle": "Crime type",
                 "featuresPanelTitle": "Precincts info",
@@ -17,7 +17,7 @@
             "prompts": {
                 "selectFeature": "Select precincts...",
                 "normalByArea": "Crimes per square kilometer",
-                "normalByPop": "Crimes per 1,000 residents",
+                "normalByPop": "Crimes per 1,000 residents"
             },
             "categories": {
                 "murder": "Murder",

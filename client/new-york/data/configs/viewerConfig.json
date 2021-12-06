@@ -1,5 +1,5 @@
 {
-    "title": "MapStore NYC Crime",
+    "title": "NMew York - Crime Map",
     "url": "/geoserver/wfs",
     "featureTypeName": "new-york:event_full",
     "defaultChartColor": "#0a5796",

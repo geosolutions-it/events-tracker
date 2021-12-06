@@ -58,7 +58,7 @@ GeoServer runs at http://localhost:8888/geoserver
 New York - Crime Map runs at http://localhost:8888/new-york
 Denver -Crime Map runs at http://localhost:8888/denver
 
- Killing the process (CTRL-C) will result in the two docker containers to shut down. Use ``clean.sh`` to remove the clients and containers.
+ `CTRL-C` will Kill the process and shut down the two docker containers. Use ``clean.sh`` to remove the clients and containers.
 
 ## Tested environments
 
@@ -68,7 +68,7 @@ Linux machine:
 - docker-compose version 1.25.0
 
 Windows machine
-- Microsoft Windows [Version 10.0.19042.928]
+- Microsoft Windows [Version 10.0.19042.1348]
 - Ubuntu 20.04.2 LTS (WSL 2 distro)
-- Docker version 20.10.5, build 55c4c88
-- docker-compose version 1.28.5, build c4eb3a1f
+- Docker version 20.10.10, build b485636
+- docker-compose version 1.29.2, build 5becea4c

@@ -23,7 +23,7 @@ Same as event, but provides information about the region and the group name.
 
 The region, with name and population.
 
-![event](img/region.png)
+![region](img/region.png)
 
 
 ### event_region
@@ -42,7 +42,7 @@ This layer is a SQL view based on the ``event_region`` function. It accepts the 
 
 Reports a count of event in hexagonal areas.
 
-![event region](img/new_york_hex_cluster_ytd.png)
+![hex cluster](img/new_york_hex_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
@@ -55,7 +55,7 @@ This layer is a SQL view and accepts the following variables:
 
 Clusters points over a regular grid, and reports for each grid cell the count of event, with a point whose position is the centroid of the event accumulated in the cell.
 
-![event region](img/new_york_point_cluster_ytd.png)
+![point cluster](img/new_york_point_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
@@ -68,7 +68,7 @@ This layer is a SQL view and accepts the following variables:
 
 Clusters points over a regular grid, and reports for each grid cell the count of event.
 
-![event region](img/new_york_square_cluster_ytd.png)
+![square cluster](img/new_york_square_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 

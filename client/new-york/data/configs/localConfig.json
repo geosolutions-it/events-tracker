@@ -4,8 +4,9 @@
         "useCORS": []
     },
     "translationsPath": [
+        "ms-translations",
         "translations",
-        "ms-translations"
+        "ov-translations"
     ],
     "extensionsRegistry": "configs/extensions.json",
     "mapConstraints": {
@@ -29,7 +30,7 @@
             {
                 "name": "Header",
                 "cfg": {
-                    "titleId": "msEventsTracker.labels.mapTitle",
+                    "titleId": "msEventsTracker.labels.pageTitle",
                     "logo": [
                         {
                             "href": "https://www.geosolutionsgroup.com/",
@@ -192,7 +193,7 @@
             {
                 "name": "Header",
                 "cfg": {
-                    "titleId": "msEventsTracker.labels.mapTitle",
+                    "titleId": "msEventsTracker.labels.pageTitle",
                     "logo": [
                         {
                             "href": "https://www.geosolutionsgroup.com/",

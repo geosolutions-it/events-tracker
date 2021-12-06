@@ -1,0 +1,43 @@
+{
+    "locale": "en-US",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Crimes",
+            "featureTypeName": "Precincts",
+            "feature": "Precinct",
+            "region_name": "Precinct",
+            "labels": {
+                "pageTitle": "Denver - Crime Map",
+                "barChartTitle": "Precincts",
+                "countersTitle": "Crime type",
+                "featuresPanelTitle": "Precincts info",
+                "selectFeatures": "There aren't selected precincts please select a precinct from the input box above to visualize the details",
+                "dataAttribution": "Data from Denver Open Data Catalog"
+            },
+            "prompts": {
+                "selectFeature": "Select precincts...",
+                "normalByArea": "Crimes per square kilometer",
+                "normalByPop": "Crimes per 1,000 residents"
+            },
+            "categories": {
+                "murder": "Murder",
+                "robbery": "Robbery",
+                "burglary": "Burglary",
+                "public-disorder": "Public Disorder",
+                "arson": "Arson",
+                "other-crimes-against-persons": "Other Crimes Against Persons",
+                "aggravated-assault": "Aggravated Assault",
+                "traffic-accident": "Traffic Accident",
+                "auto-theft": "Auto Theft",
+                "larceny": "Larceny",
+                "white-collar-crime": "White Collar Crime",
+                "drug-alcohol": "Drug Alcohol",
+                "all-other-crimes": "All Other Crimes",
+                "theft-from-motor-vehicle": "Theft from Motor Vehicle"
+            }
+        },
+        "search": {
+            "addressSearch": "Search by precinct number"
+        }
+    }
+}

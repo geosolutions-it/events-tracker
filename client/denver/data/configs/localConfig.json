@@ -200,7 +200,7 @@
             {
                 "name": "Header",
                 "cfg": {
-                    "titleId": "msEventsTracker.labels.mapTitle",
+                    "titleId": "msEventsTracker.labels.pageTitle",
                     "logo": [
                         {
                             "href": "https://www.geosolutionsgroup.com/",

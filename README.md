@@ -40,6 +40,21 @@ Before starting the project you will need to download the event data from NYC Op
 Once you have an ``new-york.csv`` file downloaded to the ``sql`` folder in this project, just run ``start.sh`` to build the web clients and start up PostgreSQL and GeoServer. Killing the process (CTRL-C) will result in the two docker containers to shut down.
 If you want to also remove the clients and containers, then use ``clean.sh``.
 
+You will know that your data has been completely loaded wehen your console contains both of the following messages:
+
+  ![console](img/console.png)
+
+  ```
+  ...
+  postgres_1   |
+  postgres_1   | Denver data load COMPLETED!
+  postgres_1   |
+  ...
+  postgres_1   |
+  postgres_1   | New York data load COMPLETED!
+  postgres_1   |
+  ...
+  ```
 GeoServer runs at http://localhost:8888/geoserver
 
 ## Tested environments
@@ -54,8 +69,3 @@ Windows machine
 - Ubuntu 20.04.2 LTS (WSL 2 distro)
 - Docker version 20.10.5, build 55c4c88
 - docker-compose version 1.28.5, build c4eb3a1f
-
-
-
-
-

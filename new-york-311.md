@@ -11,7 +11,7 @@ This layer ddirectly publishes the event table from the database.
   - Noise - Street/Sidewalk
   - HEAT/HOT WATER
 
-![event](img/event.png)
+![event](ing/311_event.png)
 
 ### event_full
 
@@ -21,14 +21,14 @@ Same as event, but provides information about the region and the group name.
 
 The region, with name and population.
 
-![region](img/region.png)
+![region](ing/311_region.png)
 
 
 ### event_region
 
 Reports the region, the event count, and the event count per 1000 inhabitants.
 
-![event region](img/event_region.png)
+![event region](ing/311_event_region.png)
 
 This layer is a SQL view based on the ``event_region`` function. It accepts the following variables:
 
@@ -40,7 +40,7 @@ This layer is a SQL view based on the ``event_region`` function. It accepts the 
 
 Reports a count of event in hexagonal areas.
 
-![hex cluster](img/new_york_hex_cluster_ytd.png)
+![hex cluster](ing/311_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 

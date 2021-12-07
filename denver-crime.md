@@ -19,7 +19,7 @@ The Denver police precints, with name and population.
 
 ### crimes_precint
 
-Reports the precints, the crime count, and the crime count per 1000 inhabitants.
+Reports the precints, the crime type, and the crime count.
 
 ![Crime precints](img/crime_precints.png)
 
@@ -31,7 +31,7 @@ This layer is a SQL view based on the ``crime_precints`` function. It accepts th
 
 ### hex_cluster_ytd
 
-Reports a count of crimes in hexagonal areas overlayed with New York City.
+Reports a count of crimes in hexagonal areas overlayed with Denver.
 
 ![Hex cluster](img/denver_hex_cluster_ytd.png)
 

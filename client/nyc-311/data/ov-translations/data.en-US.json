@@ -1,0 +1,53 @@
+{
+    "locale": "en-US",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "311 SRs",
+            "featureTypeName": "Community Districts",
+            "feature": "Community District",
+            "tableRowName": " ",
+            "region_name": "Community District",
+            "featureGroups": {
+                "group-1": "Manhattan",
+                "group-2": "Bronx",
+                "group-3": "Brooklyn",
+                "group-4": "Queens",
+                "group-5": "Staten Island"
+            },
+            "labels": {
+                "pageTitle": " New York - 311 SR Map",
+                "barChartTitle": "Community District versus Borough",
+                "countersTitle": "311 SR type",
+                "featuresPanelTitle": "Community Districts info",
+                "selectFeatures": "There aren't selected community districts please select a community district from the input box above to visualize the details",
+                "dataAttribution": "Data from New York Open Data Catalog"
+            },
+            "prompts": {
+                "selectFeature": "Select community districts...",
+                "normalByArea": "311 SRs per square kilometer",
+                "normalByPop": "311 SRs per 1,000 residents"
+            },
+            "categories": {
+                "all": "All Types",
+                "noiseResidential": "Noise - Residential",
+                "illegalParking": "Illegal Parking",
+                "noiseStreet": "Noise - Street/Sidewalk",
+                "heat": "Heat/Hotwater",
+                "blockedDriveway": "Blocked Driveway"
+            },
+            "mapVisualizations": {
+                "feature": "Community District Map",
+                "hexagon": "Density 311 SR Map (hexagon)",
+                "square": "Density 311 SR Map (square)",
+                "location": "311 SR Location Map"    
+            },
+            "download": {
+                "baseLayerDesc": "GeoJSON community district polygons",
+                "aggregatedLayerDesc": "GeoJSON community districts with 311 SR counts",
+                "aggregatedDataDesc": "CSV 311 SR counts by community district",
+                "timeseriesDataDesc": "CSV 311 SR counts by community district and month",
+                "fileName": "nyc-311-map"
+            }
+        }
+    }
+}

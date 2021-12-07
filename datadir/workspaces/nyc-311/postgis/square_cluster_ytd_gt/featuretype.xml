@@ -1,0 +1,113 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--63e7489c:17d927de05a:-7fe5</id>
+  <name>square_cluster_ytd_gt</name>
+  <nativeName>square_cluster_ytd_gt</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--63e7489c:17d927de05a:-7ffb</id>
+  </namespace>
+  <title>square_cluster_ytd_gt</title>
+  <keywords>
+    <string>square_cluster_ytd_gt</string>
+    <string>features</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>-74.2575</minx>
+    <maxx>-73.69950000000001</maxx>
+    <miny>40.4985</miny>
+    <maxy>40.9155</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-74.2575</minx>
+    <maxx>-73.69950000000001</maxx>
+    <miny>40.4985</miny>
+    <maxy>40.9155</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>square_cluster_ytd_gt</name>
+        <sql>SELECT&#xd;
+  count(1) count,&#xd;
+  type,&#xd;
+  x_round,&#xd;
+  y_round,&#xd;
+  ST_MakePolygon(st_makeline(&#xd;
+    ARRAY[&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round - %r% / 2),&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round + %r% / 2),&#xd;
+	    ST_MakePoint(x_round + %r% / 2, y_round + %r% / 2),&#xd;
+	    ST_MakePoint(x_round + %r% / 2, y_round - %r% / 2),&#xd;
+	    ST_MakePoint(x_round - %r% / 2, y_round - %r% / 2)&#xd;
+    ]&#xd;
+ )) AS the_geom &#xd;
+FROM (&#xd;
+  SELECT&#xd;
+    the_geom,&#xd;
+    type,    &#xd;
+    ST_X(the_geom) AS x,&#xd;
+    ST_Y(the_geom) AS y,&#xd;
+    round(ST_X(the_geom) / %r%) * %r% AS x_round,&#xd;
+    round(ST_Y(the_geom) / %r%) * %r% AS y_round&#xd;
+  FROM&#xd;
+    nyc311.event &#xd;
+  WHERE&#xd;
+   month BETWEEN %mo_min% AND %mo_max%&#xd;
+   AND type IN (%event_type%)&#xd;
+   :where_clause:&#xd;
+) agg GROUP BY x_round, y_round, type
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>the_geom</name>
+          <type>Geometry</type>
+          <srid>-1</srid>
+        </geometry>
+        <parameter>
+          <name>r</name>
+          <defaultValue>0.003</defaultValue>
+          <regexpValidator>^[\d\.]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>event_type</name>
+          <defaultValue>&apos;Noise - Residential&apos;, &apos;Illegal Parking&apos;, &apos;Noise - Street/Sidewalk&apos;, &apos;HEAT/HOT WATER&apos;, &apos;Blocked Driveway&apos;</defaultValue>
+          <regexpValidator>^(&apos;[\w\s\-\/]+&apos;\s*,?\s*)+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_min</name>
+          <defaultValue>202101</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_max</name>
+          <defaultValue>202112</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--63e7489c:17d927de05a:-7ffa</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

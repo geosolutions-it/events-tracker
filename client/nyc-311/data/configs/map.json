@@ -1,0 +1,471 @@
+{
+  "version": 2,
+  "map": {
+    "projection": "EPSG:900913",
+    "units": "m",
+    "center": {
+      "x": -73.935242,
+      "y": 40.730610,
+      "crs": "EPSG:4326"
+    },
+    "zoom": 10,
+    "maxExtent": [
+      -20037508.34,
+      -20037508.34,
+      20037508.34,
+      20037508.34
+    ],
+    "layers": [
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm_simple_dark",
+        "opacity": 1,
+        "title": "OSM Simple Dark",
+        "thumbURL": "assets/img/osm-simple-dark.jpg",
+        "type": "wms",
+        "url": [
+          "https://maps6.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm_simple_dark",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Simple Dark | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "type": "tileprovider",
+        "provider": "custom",
+        "group": "background",
+        "url": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png",
+        "visibility": false,
+        "attribution": "cartodb-basemaps"
+      },
+      {
+        "id": "basemap__15",
+        "format": "image/jpeg",
+        "name": "basemap",
+        "group": "background",
+        "description": "basemap",
+        "style": "",
+        "title": "basemap",
+        "type": "wmts",
+        "url": "https://maps.nyc.gov/wmts/1.0.0/",
+        "bbox": {
+          "crs": "EPSG:4326",
+          "bounds": {
+            "minx": "-179.9999999749438",
+            "miny": "-85.05112877764508",
+            "maxx": "179.9999999749438",
+            "maxy": "85.05112877764508"
+          }
+        },
+        "visibility": true,
+        "singleTile": false,
+        "allowedSRS": {
+          "EPSG:900913": true
+        },
+        "matrixIds": [
+          "EPSG:900913"
+        ],
+        "tileMatrixSet": true,
+        "requestEncoding": "KVP"
+      },
+      {
+        "id": "basemap__15_label",
+        "format": "image/png8",
+        "name": "label",
+        "description": "label",
+        "style": "",
+        "title": "label",
+        "type": "wmts",
+        "url": "https://maps.nyc.gov/wmts/1.0.0/",
+        "bbox": {
+          "crs": "EPSG:4326",
+          "bounds": {
+            "minx": "-179.9999999749438",
+            "miny": "-85.05112877764508",
+            "maxx": "179.9999999749438",
+            "maxy": "85.05112877764508"
+          }
+        },
+        "visibility": true,
+        "singleTile": false,
+        "allowedSRS": {
+          "EPSG:900913": true
+        },
+        "matrixIds": [
+          "EPSG:900913"
+        ],
+        "tileMatrixSet": true,
+        "requestEncoding": "KVP"
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm_simple_light",
+        "opacity": 1,
+        "title": "OSM Simple Light",
+        "thumbURL": "assets/img/osm-simple-light.jpeg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm_simple_light",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Simple Light | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "osm:osm",
+        "opacity": 1,
+        "title": "OSM Bright",
+        "thumbURL": "assets/img/osm-bright.jpg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "osm",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "OSM Bright | Rendering <a href=\"https://www.geo-solutions.it/\">GeoSolutions</a> | Data © <a href=\"http://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>"
+        }
+      },
+      {
+        "format": "image/jpeg",
+        "group": "background",
+        "name": "s2cloudless:s2cloudless",
+        "opacity": 1,
+        "title": "Sentinel 2 Cloudless",
+        "thumbURL": "assets/img/s2cloudless.jpeg",
+        "type": "wms",
+        "url": [
+          "https://maps1.geosolutionsgroup.com/geoserver/wms",
+          "https://maps2.geosolutionsgroup.com/geoserver/wms",
+          "https://maps3.geosolutionsgroup.com/geoserver/wms",
+          "https://maps4.geosolutionsgroup.com/geoserver/wms",
+          "https://maps5.geosolutionsgroup.com/geoserver/wms",
+          "https://maps6.geosolutionsgroup.com/geoserver/wms"
+        ],
+        "source": "s2cloudless",
+        "visibility": false,
+        "singleTile": false,
+        "credits": {
+          "title": "<a class=\"a-light\" xmlns:dct=\"http://purl.org/dc/terms/\" href=\"https://s2maps.eu\" property=\"dct:title\">Sentinel-2 cloudless 2016</a> by <a class=\"a-light\" xmlns:cc=\"http://creativecommons.org/ns#\" href=\"https://eox.at\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">EOX IT Services GmbH</a>"
+        }
+      }
+    ],
+    "sources": {
+      "https://maps.nyc.gov/wmts/1.0.0/": {
+        "tileMatrixSet": {
+          "EPSG:900913": {
+            "ows:Identifier": "EPSG:900913",
+            "ows:SupportedCRS": "urn:ogc:def:crs:EPSG::900913",
+            "TileMatrix": [
+              {
+                "ows:Identifier": "EPSG:900913:0",
+                "ScaleDenominator": "5.590822639508929E8",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "1",
+                "MatrixHeight": "1"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:1",
+                "ScaleDenominator": "2.7954113197544646E8",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "2",
+                "MatrixHeight": "2"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:2",
+                "ScaleDenominator": "1.3977056598772323E8",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "4",
+                "MatrixHeight": "4"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:3",
+                "ScaleDenominator": "6.988528299386162E7",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "8",
+                "MatrixHeight": "8"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:4",
+                "ScaleDenominator": "3.494264149693081E7",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "16",
+                "MatrixHeight": "16"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:5",
+                "ScaleDenominator": "1.7471320748465404E7",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "32",
+                "MatrixHeight": "32"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:6",
+                "ScaleDenominator": "8735660.374232702",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "64",
+                "MatrixHeight": "64"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:7",
+                "ScaleDenominator": "4367830.187116351",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "128",
+                "MatrixHeight": "128"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:8",
+                "ScaleDenominator": "2183915.0935581755",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "256",
+                "MatrixHeight": "256"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:9",
+                "ScaleDenominator": "1091957.5467790877",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "512",
+                "MatrixHeight": "512"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:10",
+                "ScaleDenominator": "545978.7733895439",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "1024",
+                "MatrixHeight": "1024"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:11",
+                "ScaleDenominator": "272989.38669477194",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "2048",
+                "MatrixHeight": "2048"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:12",
+                "ScaleDenominator": "136494.69334738597",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "4096",
+                "MatrixHeight": "4096"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:13",
+                "ScaleDenominator": "68247.34667369298",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "8192",
+                "MatrixHeight": "8192"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:14",
+                "ScaleDenominator": "34123.67333684649",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "16384",
+                "MatrixHeight": "16384"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:15",
+                "ScaleDenominator": "17061.836668423246",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "32768",
+                "MatrixHeight": "32768"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:16",
+                "ScaleDenominator": "8530.918334211623",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "65536",
+                "MatrixHeight": "65536"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:17",
+                "ScaleDenominator": "4265.4591671058115",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "131072",
+                "MatrixHeight": "131072"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:18",
+                "ScaleDenominator": "2132.7295835529058",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "262144",
+                "MatrixHeight": "262144"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:19",
+                "ScaleDenominator": "1066.3647917764529",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "524288",
+                "MatrixHeight": "524288"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:20",
+                "ScaleDenominator": "533.1823958882264",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "1048576",
+                "MatrixHeight": "1048576"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:21",
+                "ScaleDenominator": "266.5911979441132",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "2097152",
+                "MatrixHeight": "2097152"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:22",
+                "ScaleDenominator": "133.2955989720566",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "4194304",
+                "MatrixHeight": "4194304"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:23",
+                "ScaleDenominator": "66.6477994860283",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "8388608",
+                "MatrixHeight": "8388608"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:24",
+                "ScaleDenominator": "33.32389974301415",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "16777216",
+                "MatrixHeight": "16777216"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:25",
+                "ScaleDenominator": "16.661949871507076",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "33554432",
+                "MatrixHeight": "33554432"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:26",
+                "ScaleDenominator": "8.330974935753538",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "67108864",
+                "MatrixHeight": "67108864"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:27",
+                "ScaleDenominator": "4.165487467876769",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "134217728",
+                "MatrixHeight": "134217728"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:28",
+                "ScaleDenominator": "2.0827437339383845",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "268435456",
+                "MatrixHeight": "268435456"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:29",
+                "ScaleDenominator": "1.0413718669691923",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "536870912",
+                "MatrixHeight": "536870912"
+              },
+              {
+                "ows:Identifier": "EPSG:900913:30",
+                "ScaleDenominator": "0.5206859334845961",
+                "TopLeftCorner": "-2.003750834E7 2.0037508E7",
+                "TileWidth": "256",
+                "TileHeight": "256",
+                "MatrixWidth": "1073741824",
+                "MatrixHeight": "1073741824"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

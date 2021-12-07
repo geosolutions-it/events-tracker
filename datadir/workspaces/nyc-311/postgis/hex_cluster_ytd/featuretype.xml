@@ -83,6 +83,7 @@ GROUP BY hexes.i, hexes.j, hexes.the_geom
         </parameter>
       </virtualTable>
     </entry>
+    <entry key="cachingEnabled">false</entry>
   </metadata>
   <store class="dataStore">
     <id>DataStoreInfoImpl--63e7489c:17d927de05a:-7ffa</id>

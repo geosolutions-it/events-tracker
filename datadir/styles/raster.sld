@@ -7,27 +7,21 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <!-- a Named Layer is the basic building block of an SLD document -->
   <NamedLayer>
-    <Name>default_polygon</Name>
+    <Name>default_raster</Name>
     <UserStyle>
     <!-- Styles can have names, titles and abstracts -->
-      <Title>Grey Polygon</Title>
-      <Abstract>A sample style that draws a polygon</Abstract>
+      <Title>Opaque Raster</Title>
+      <Abstract>A sample style that draws a raster, good for displaying imagery</Abstract>
       <!-- FeatureTypeStyles describe how to render different features -->
-      <!-- A FeatureTypeStyle for rendering polygons -->
+      <!-- A FeatureTypeStyle for rendering rasters -->
       <FeatureTypeStyle>
         <Rule>
           <Name>rule1</Name>
-          <Title>Grey Polygon with Black Outline</Title>
-          <Abstract>A polygon with a grey fill and a 1 pixel black outline</Abstract>
-          <PolygonSymbolizer>
-            <Fill>
-              <CssParameter name="fill">#AAAAAA</CssParameter>
-            </Fill>
-            <Stroke>
-              <CssParameter name="stroke">#000000</CssParameter>
-              <CssParameter name="stroke-width">1</CssParameter>
-            </Stroke>
-          </PolygonSymbolizer>
+          <Title>Opaque Raster</Title>
+          <Abstract>A raster with 100% opacity</Abstract>
+          <RasterSymbolizer>
+            <Opacity>1.0</Opacity>
+          </RasterSymbolizer>
         </Rule>
       </FeatureTypeStyle>
     </UserStyle>

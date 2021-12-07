@@ -26,4 +26,6 @@ hs_err_pid*
 .env
 
 # geoserver log
-./logs
+logs/
+# postgres data
+data/

@@ -59,11 +59,7 @@
     <queueType>UNBOUNDED</queueType>
     <imageIOCacheThreshold>10240</imageIOCacheThreshold>
   </coverageAccess>
-<<<<<<< HEAD
   <updateSequence>366</updateSequence>
-=======
-  <updateSequence>446</updateSequence>
->>>>>>> main
   <featureTypeCacheSize>0</featureTypeCacheSize>
   <globalServices>true</globalServices>
   <useHeadersProxyURL>false</useHeadersProxyURL>

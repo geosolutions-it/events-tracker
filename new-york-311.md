@@ -11,7 +11,7 @@ This layer ddirectly publishes the event table from the database.
   - Noise - Street/Sidewalk
   - HEAT/HOT WATER
 
-![event](ing/311_event.png)
+![event](img/311_event.png)
 
 ### event_full
 
@@ -21,14 +21,14 @@ Same as event, but provides information about the region and the group name.
 
 The region, with name and population.
 
-![region](ing/311_region.png)
+![region](img/311_region.png)
 
 
 ### event_region
 
 Reports the region, the event count, and the event count per 1000 inhabitants.
 
-![event region](ing/311_event_region.png)
+![event region](img/311_event_region.png)
 
 This layer is a SQL view based on the ``event_region`` function. It accepts the following variables:
 
@@ -40,7 +40,7 @@ This layer is a SQL view based on the ``event_region`` function. It accepts the 
 
 Reports a count of event in hexagonal areas.
 
-![hex cluster](ing/311_cluster_ytd.png)
+![hex cluster](img/311_hex_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
@@ -53,7 +53,7 @@ This layer is a SQL view and accepts the following variables:
 
 Clusters points over a regular grid, and reports for each grid cell the count of event, with a point whose position is the centroid of the event accumulated in the cell.
 
-![point cluster](img/new_york_point_cluster_ytd.png)
+![point cluster](img/311_point_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
@@ -66,7 +66,7 @@ This layer is a SQL view and accepts the following variables:
 
 Clusters points over a regular grid, and reports for each grid cell the count of event.
 
-![square cluster](img/new_york_square_cluster_ytd.png)
+![square cluster](img/311_square_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 

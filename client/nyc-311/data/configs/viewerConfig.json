@@ -1,0 +1,413 @@
+{
+    "title": "New York - 311 SR Map",
+    "url": "/geoserver/wfs",
+    "featureTypeName": "nyc-311:event_full",
+    "defaultChartColor": "#0a5796",
+    "categories": [
+        {
+            "labelId": "msEventsTracker.categories.noiseResidential",
+            "value": "Noise - Residential",
+            "color": "#ff33aa"
+        },
+        {
+            "labelId": "msEventsTracker.categories.illegalParking",
+            "value": "Illegal Parking",
+            "color": "#42b956"
+        },
+        {
+            "labelId": "msEventsTracker.categories.noiseStreet",
+            "value": "Noise - Street/Sidewalk",
+            "color": "#33aaff"
+        },
+        {
+            "labelId": "msEventsTracker.categories.heat",
+            "value": "HEAT/HOT WATER",
+            "color": "#b16d46"
+        },
+        {
+            "labelId": "msEventsTracker.categories.blockedDriveway",
+            "value": "Blocked Driveway",
+            "color": "#6a46b1"
+        }
+    ],
+    "category": {
+        "key": "type",
+        "type": "string"
+    },
+    "date": {
+        "key": "month",
+        "type": "number",
+        "format": "YYYYMM"
+    },
+    "feature": {
+        "key": "region_name",
+        "labelKey": "name",
+        "type": "string",
+        "group": "group_name",
+        "layer": {
+            "key": "name",
+            "type": "vector",
+            "url": "/geoserver/wfs",
+            "params": {
+                "service": "WFS",
+                "typeName": "nyc-311:region",
+                "version": "1.1.0",
+                "request": "GetFeature",
+                "outputFormat": "application/json"
+            }
+        }
+    },
+    "mapVisualizations": [
+        {
+            "id": "region",
+            "labelId": "msEventsTracker.mapVisualizations.feature",
+            "normalized": true,
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "name"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "event_count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "nyc-311:event_region_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "type": "scaleQuantile",
+                        "domain": "event_count",
+                        "domainExtent": false,
+                        "normalize": true,
+                        "normalizePropertyKey": "normalizedCount",
+                        "range": [
+                            "#fef6ee",
+                            "#fedec2",
+                            "#fec69d",
+                            "#f2aa86",
+                            "#d29a81"
+                        ],
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "min_mo",
+                        "to": "max_mo",
+                        "category": "event_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "name"
+                            },
+                            {
+                                "key": "event_count",
+                                "labelId": "msEventsTracker.dataPoints"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "title": true,
+                        "fields": [
+                            {
+                                "key": "event_count",
+                                "labelId": "msEventsTracker.dataPoints"
+                            },
+                            {
+                                "key": "population",
+                                "labelId": "msEventsTracker.labels.population",
+                                "target": "feature"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "hex-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.hexagon",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "i",
+                            "j"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "nyc-311:hex_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleQuantile",
+                        "domain": "count",
+                        "domainExtent": false,
+                        "range": "viridis",
+                        "rangeClasses": 12,
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "event_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "square-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.square",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "nyc-311:square_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleQuantile",
+                        "domain": "count",
+                        "domainExtent": false,
+                        "range": "spectral",
+                        "rangeClasses": 10,
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "event_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "point-cluster",
+            "labelId": "msEventsTracker.mapVisualizations.location",
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "maxResolution": 20,
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "nyc-311:point_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleLinear",
+                        "domain": "count",
+                        "domainExtent": true,
+                        "range": [
+                            2,
+                            32
+                        ],
+                        "stylePropertyKey": "radius"
+                    },
+                    "style": {
+                        "fillColor": "#33aaff",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 1,
+                        "weight": 0.1,
+                        "radius": 10
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max",
+                        "category": "event_type"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "minResolution": 20,
+                    "groupBy": {
+                        "keys": [
+                            "x_round",
+                            "y_round"
+                        ],
+                        "categoryKey": "type",
+                        "valueKey": "count"
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "nyc-311:point_cluster_ytd_gt",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json",
+                        "viewparams": "r:0.015;"
+                    },
+                    "classification": {
+                        "labelId": "msEventsTracker.dataPoints",
+                        "type": "scaleLinear",
+                        "domain": "count",
+                        "domainExtent": true,
+                        "range": [
+                            2,
+                            16
+                        ],
+                        "stylePropertyKey": "radius"
+                    },
+                    "style": {
+                        "fillColor": "#33aaff",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 1,
+                        "weight": 0.1,
+                        "radius": 10
+                    },
+                    "viewParamsMap": {
+                        "from": "mo_min",
+                        "to": "mo_max"
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "fields": [
+                            {
+                                "key": "count",
+                                "labelId": "msEventsTracker.labels.count"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "normalizerOptions": [
+        {
+            "labelId": "msEventsTracker.prompts.normalByPop",
+            "value": "population",
+            "params": {
+                "multiplier": 1000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        },
+        {
+            "labelId": "msEventsTracker.prompts.normalByArea",
+            "value": "area",
+            "params": {
+                "multiplier": 1000000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        }
+    ]
+}

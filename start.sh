@@ -3,7 +3,7 @@ cd client
 apps=(*/)
 for app in "${apps[@]}"; 
 do
-  if [ ! -d ./client/$app/dist ]
+  if [ ! -d ./$app/dist ]
   then
     echo building mapstore-events-tracker ${app::-1}
     cd $app

@@ -1,0 +1,17 @@
+<layer>
+  <name>event_full</name>
+  <id>LayerInfoImpl--63e7489c:17d927de05a:-7ff4</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl-79c3ffa6:17d819d0785:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--63e7489c:17d927de05a:-7ff5</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-12-07 01:36:47.742 UTC</dateCreated>
+  <dateModified>2021-12-07 02:06:52.485 UTC</dateModified>
+</layer>

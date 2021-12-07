@@ -136,7 +136,7 @@
                                 "priority": 1,
                                 "options": {
                                     "url": "/geoserver/wfs",
-                                    "typeName": "nyc:precincts",
+                                    "typeName": "new-york:region",
                                     "queriableAttributes": [
                                         "name"
                                     ],
@@ -296,7 +296,7 @@
                                 "priority": 1,
                                 "options": {
                                     "url": "/geoserver/wfs",
-                                    "typeName": "nyc:precincts",
+                                    "typeName": "new-york:region",
                                     "queriableAttributes": [
                                         "name"
                                     ],

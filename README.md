@@ -11,17 +11,18 @@
     - [square_cluster_ytd](./NEW-YORK.md#square_cluster_ytd)
     - [Providing parameters to SQL views](./NEW-YORK.md##providing-parameters-to-sql-views)
   - [Denver layers and variables](./DENVER.md#denver-layers-and-variables)
-    - [event](./DENVER.md#event)
-    - [region](./DENVER.md#region)
-    - [event_region](./DENVER.md#event_region)
+    - [crime_location](./DENVER.md#crime_location)
+    - [crime_location_full](./DENVER.md#crime_location_full)
+    - [precints](./DENVER.md#precints)
+    - [crimes_precint](./DENVER.md#crimes_precint)
     - [hex_cluster_ytd](./DENVER.md#hex_cluster_ytd)
     - [point_cluster_ytd](./DENVER.md#point_cluster_ytd)
     - [square_cluster_ytd](./DENVER.md#square_cluster_ytd)
     - [Providing parameters to SQL views](./DENVER.md##providing-parameters-to-sql-views)
 
 This repository contains a GeoServer data directory for the event demo map. In particular, it provides:
-- A data directory, in ``datadir``, with the definition of database connections, layers and style to re-create the event and region map layers
-- A script ``events-tracker.sql.gz`` to load region data and event data from an ``event.csv`` file downloaded from NYC Open Data
+- A ``datadir`` with the definition of workspaces, database connections, layers and styles to create the layers for New York and Denver Crime Maps.
+- A `sql` folder containing scripts to load New York and Denver crime locations and police precincts.
 - A Docker compose file that sets up a GeoServer running on said data directory, and a PostgreSQL/PostGIS database loaded with the data, already setup to talk with each other
 
 Before using the machinery above, a ``.env`` file needs to be created, in this directory. The file will contain a couple of 
@@ -34,12 +35,30 @@ POSTGRES_DB=events-tracker
 
 For the time being, keep the file as above, as the GeoServer data directory is using those exact values. This is suitable for development, we'll make it fully parametric later down the road.
 
-Before starting the project you will need to download the event data from NYC Open Data by following [these instruction](./nyc-open-data.md).
+Before starting the project you will need to download the New York event data from NYC Open Data by following [these instruction](./nyc-open-data.md).
 
-Once you have an ``new-york.csv`` file downloaded to the ``sql`` folder in this project, just run ``start.sh`` to build the web clients and start up PostgreSQL and GeoServer. Killing the process (CTRL-C) will result in the two docker containers to shut down.
-If you want to also remove the clients and containers, then use ``clean.sh``.
+Once you have an ``new-york.csv`` file downloaded to the ``sql`` folder in this project, just run ``start.sh`` to build the web clients and start up PostgreSQL and GeoServer.
 
+You will know that your data has been completely loaded wehen your console contains both of the following messages:
+
+  ![console](img/console.png)
+
+  ```
+  ...
+  postgres_1   |
+  postgres_1   | Denver data load COMPLETED!
+  postgres_1   |
+  ...
+  postgres_1   |
+  postgres_1   | New York data load COMPLETED!
+  postgres_1   |
+  ...
+  ```
 GeoServer runs at http://localhost:8888/geoserver
+New York - Crime Map runs at http://localhost:8888/new-york
+Denver -Crime Map runs at http://localhost:8888/denver
+
+ `CTRL-C` will Kill the process and shut down the two docker containers. Use ``clean.sh`` to remove the clients and containers.
 
 ## Tested environments
 
@@ -49,12 +68,7 @@ Linux machine:
 - docker-compose version 1.25.0
 
 Windows machine
-- Microsoft Windows [Version 10.0.19042.928]
+- Microsoft Windows [Version 10.0.19042.1348]
 - Ubuntu 20.04.2 LTS (WSL 2 distro)
-- Docker version 20.10.5, build 55c4c88
-- docker-compose version 1.28.5, build c4eb3a1f
-
-
-
-
-
+- Docker version 20.10.10, build b485636
+- docker-compose version 1.29.2, build 5becea4c

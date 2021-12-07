@@ -61,7 +61,7 @@ FROM (&#xd;
     round(ST_X(the_geom) / %r%) * %r% AS x_round,&#xd;
     round(ST_Y(the_geom) / %r%) * %r% AS y_round&#xd;
   FROM&#xd;
-    event &#xd;
+    newyork.event &#xd;
   WHERE&#xd;
    month between %mo_min% and %mo_max%&#xd;
    and type IN (%event_type%)&#xd;

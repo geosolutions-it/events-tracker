@@ -6,9 +6,12 @@ services:
     image: postgis/postgis:12-3.1
     restart: unless-stopped
     volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./sql/nyc-311.csv:/home/nyc-311.csv
       - ./sql/new-york.csv:/home/new-york.csv
-      - ./sql/new-york.sql.gz:/docker-entrypoint-initdb.d/new-york.sql.gz
+      - ./sql/nyc-311.sql.gz:/docker-entrypoint-initdb.d/nyc-311.sql.gz
       - ./sql/denver.sql.gz:/docker-entrypoint-initdb.d/denver.sql.gz
+      - ./sql/new-york.sql.gz:/docker-entrypoint-initdb.d/new-york.sql.gz
     env_file:
       - .env
   geoserver:
@@ -21,8 +24,9 @@ services:
     user: ${CURRENT_UID}
     volumes:
       - ./datadir/:/var/geoserver/datadir
-      - ./client/new-york/dist:/usr/local/tomcat/webapps/new-york
       - ./client/denver/dist:/usr/local/tomcat/webapps/denver
+      - ./client/new-york/dist:/usr/local/tomcat/webapps/new-york
+      - ./client/nyc-311/dist:/usr/local/tomcat/webapps/nyc-311
       - ./data:/var/geoserver/data
       - ./logs:/var/geoserver/logs
     env_file:

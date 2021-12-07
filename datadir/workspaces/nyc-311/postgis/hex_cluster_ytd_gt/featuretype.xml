@@ -1,0 +1,100 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--63e7489c:17d927de05a:-7fed</id>
+  <name>hex_cluster_ytd_gt</name>
+  <nativeName>hex_cluster_ytd_gt</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--63e7489c:17d927de05a:-7ffb</id>
+  </namespace>
+  <title>hex_cluster_ytd_gt</title>
+  <keywords>
+    <string>features</string>
+    <string>hex_cluster_ytd_gt</string>
+  </keywords>
+  <nativeCRS>GEOGCS[&quot;WGS 84&quot;, 
+  DATUM[&quot;World Geodetic System 1984&quot;, 
+    SPHEROID[&quot;WGS 84&quot;, 6378137.0, 298.257223563, AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]], 
+    AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]], 
+  PRIMEM[&quot;Greenwich&quot;, 0.0, AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]], 
+  UNIT[&quot;degree&quot;, 0.017453292519943295], 
+  AXIS[&quot;Geodetic longitude&quot;, EAST], 
+  AXIS[&quot;Geodetic latitude&quot;, NORTH], 
+  AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]]</nativeCRS>
+  <srs>EPSG:4326</srs>
+  <nativeBoundingBox>
+    <minx>-74.2035</minx>
+    <maxx>-73.69800000000001</maxx>
+    <miny>40.50920428742091</miny>
+    <maxy>40.91710225260338</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-74.2035</minx>
+    <maxx>-73.69800000000001</maxx>
+    <miny>40.50920428742091</miny>
+    <maxy>40.91710225260338</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="JDBC_VIRTUAL_TABLE">
+      <virtualTable>
+        <name>hex_cluster_ytd_gt</name>
+        <sql>SELECT count(1),&#xd;
+  hexes.i,&#xd;
+  hexes.j,&#xd;
+  hexes.the_geom,&#xd;
+  e.type&#xd;
+FROM (&#xd;
+  SELECT ST_SetSRID(geom, 4326) AS the_geom, i, j&#xd;
+  FROM ST_HexagonGrid(%r%, ST_MakeEnvelope(-74.2, 40.4, -73.6, 41))) AS hexes&#xd;
+       INNER JOIN&#xd;
+         (SELECT * &#xd;
+          FROM nyc311.event &#xd;
+          WHERE month BETWEEN %mo_min% AND %mo_max%&#xd;
+          AND type IN (%event_type%)&#xd;
+          :where_clause:) AS e&#xd;
+  ON ST_intersects(hexes.the_geom, e.the_geom)&#xd;
+GROUP BY hexes.i, hexes.j, hexes.the_geom, e.type
+</sql>
+        <escapeSql>false</escapeSql>
+        <geometry>
+          <name>the_geom</name>
+          <type>Geometry</type>
+          <srid>-1</srid>
+        </geometry>
+        <parameter>
+          <name>r</name>
+          <defaultValue>0.003</defaultValue>
+          <regexpValidator>^[\d\.]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>event_type</name>
+          <defaultValue>&apos;Noise - Residential&apos;, &apos;Illegal Parking&apos;, &apos;Noise - Street/Sidewalk&apos;, &apos;HEAT/HOT WATER&apos;, &apos;Blocked Driveway&apos;</defaultValue>
+          <regexpValidator>^(&apos;[\w\s\-\/]+&apos;\s*,?\s*)+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_min</name>
+          <defaultValue>202101</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+        <parameter>
+          <name>mo_max</name>
+          <defaultValue>202112</defaultValue>
+          <regexpValidator>^[\d]+$</regexpValidator>
+        </parameter>
+      </virtualTable>
+    </entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--63e7489c:17d927de05a:-7ffa</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

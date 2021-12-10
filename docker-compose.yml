@@ -23,6 +23,7 @@ services:
     user: ${CURRENT_UID}
     volumes:
       - ./datadir/:/var/geoserver/datadir
+      - ./index.html:/usr/local/tomcat/webapps/ROOT/index.html
       - ./client/denver/dist:/usr/local/tomcat/webapps/denver
       - ./client/new-york/dist:/usr/local/tomcat/webapps/new-york
       - ./client/nyc-311/dist:/usr/local/tomcat/webapps/nyc-311

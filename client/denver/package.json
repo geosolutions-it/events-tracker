@@ -5,7 +5,7 @@
     "compile": "mapstore-events-tracker compile"
   },
   "dependencies": {
-    "mapstore-events-tracker": "^1.0.3"
+    "mapstore-events-tracker": "^1.0.4"
   },
   "author": "GeoSolutions",
   "license": "BSD-2-Clause"

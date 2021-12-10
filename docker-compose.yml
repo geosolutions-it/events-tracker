@@ -6,7 +6,6 @@ services:
     image: postgis/postgis:12-3.1
     restart: unless-stopped
     volumes:
-      - ./data:/var/lib/postgresql/data
       - ./sql/nyc-311.csv:/home/nyc-311.csv
       - ./sql/new-york.csv:/home/new-york.csv
       - ./sql/nyc-311.sql.gz:/docker-entrypoint-initdb.d/nyc-311.sql.gz

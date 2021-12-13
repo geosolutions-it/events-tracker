@@ -1,0 +1,71 @@
+{
+    "locale": "en-US",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Events",
+            "cancel": "Cancel",
+            "errorInit": "Connection Error",
+            "categories": {
+            },
+            "featureTypeName": "Regions",
+            "feature": "Region",
+            "featureKey": "region_name",
+            "tableRowName": " ",
+            "featureGroups": {},
+            "mapVisualizations": {
+                "feature": "Region Map",
+                "hexagon": "Event Density Map (hexagon)",
+                "square": "Event Density Map (square)",
+                "location": "Event Location Map"    
+            },
+            "prompts": {
+                "dateFrom": "From:",
+                "dateTo": "To:",
+                "selectFeature": "Select regions...",
+                "normalBy": "Normalize by:",
+                "normalByArea": "Events per square kilometer",
+                "normalByNone": "None",
+                "normalByPop": "Events per 1,000 residents",
+                "population": "Population",
+                "switchToLight": "Switch to light",
+                "switchToDark": "Switch to dark"
+            },
+            "labels": {
+                "count": "Count",
+                "month": "Month",
+                "builtWith": "Built with",
+                "time": "Time",
+                "table": "Table",
+                "detail": "Detail",
+                "barChartTitle": "Region versus Group",
+                "barChartDesctiption": "comparison chart",
+                "pageTitle": " Event Map",
+                "mapVisualizationTitle": "Map type",
+                "countersTitle": "Event type",
+                "chartTitle": "Chart",
+                "featuresPanelTitle": "Regions info",
+                "emptyPanel": "No data available",
+                "emptyCounters": "No data available",
+                "emptyChart": "No data available",
+                "selectFeatures": "There aren't selected regions please select a region from the input box above to visualize the details"
+            },
+            "download": {
+                "readmeDesc": "Describes the contents of the download",
+                "baseLayerDesc": "GeoJSON region polygons",
+                "aggregatedLayerDesc": "GeoJSON regions with event counts",
+                "aggregatedDataDesc": "CSV event counts by region",
+                "timeseriesDataDesc": "CSV event counts by region and month",
+                "download": "Download",
+                "options": "Download options:",
+                "fileName": "event-map"
+            },
+            "error": {
+                "init": "Error while connecting to the configured service. Please check the configuration",
+                "counters": "Connection error to counters endpoint",
+                "chart": "Connection error to chart endpoint",
+                "requestErrorTable": "Connection error to table endpoint",
+                "details": "Connection error to details endpoint"
+            }
+        }
+    }
+}

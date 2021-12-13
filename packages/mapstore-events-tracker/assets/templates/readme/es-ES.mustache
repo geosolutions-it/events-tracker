@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Estadísticas</title>
+</head>
+<style>
+    html {
+        font-family: "Noto Sans", sans-serif;
+    }
+</style>
+
+<body>
+    <h1>Estadísticas</h1>
+    <h3>{{normalizerTxt }}<br>{{datesRange.from}} - {{datesRange.to}}</h3>
+    <h4>({{ types }})</h4>
+    <p>
+        <strong><a href="{{url}}">Abrir mapa interactivo</a></strong>
+    </p>
+    <h3>Archivos incluidos</h3>
+    <ul>
+        {{#files}}
+        <li>/<strong>{{folder}}{{name}}</strong><br>{{desc}}</li>
+        {{/files}}
+    </ul>
+</body>
+
+</html>

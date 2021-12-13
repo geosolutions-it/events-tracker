@@ -1,0 +1,71 @@
+{
+    "locale": "es-ES",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Eventos",
+            "cancel": "Cancelar",
+            "errorInit": "Error de conexión",
+            "categories": {
+            },
+            "featureTypeName": "Regiones",
+            "feature": "Región",
+            "featureKey": "region_name",
+            "tableRowName": " ",
+            "featureGroups": {},
+            "mapVisualizations": {
+                "feature": "Mapa del región",
+                "hexagon": "Mapa de densidad de eventos (hexágono)",
+                "square": "Mapa de densidad de eventos (cuadrado)",
+                "location": "Mapa de ubicación del crimen"    
+            },
+            "prompts": {
+                "dateFrom": "De:",
+                "dateTo": "A:",
+                "selectFeature": "Seleccionar región...",
+                "normalBy": "Normalizar por:",
+                "normalByArea": "Eventos por kilómetro cuadrado",
+                "normalByNone": "Ninguna",
+                "normalByPop": "Eventos por cada 1.000 habitantes",
+                "population": "Población",
+                "switchToLight": "Cambiar a la luz",
+                "switchToDark": "Cambia a la oscuridad"
+            },
+            "labels": {
+                "count": "Contar",
+                "month": "Mes",
+                "builtWith": "Construido con",
+                "time": "Hora",
+                "table": "Mesa",
+                "detail": "Detalle",
+                "barChartTitle": "Región versus grupo",
+                "barChartDescription": "gráfica comparativa",
+                "pageTitle": "Mapa de eventos",
+                "mapVisualizationTitle": "Tipo de mapa",
+                "countersTitle": "Tipo de evento",
+                "chartTitle": "Gráfico",
+                "featuresPanelTitle": "Información de regiones",
+                "emptyPanel": "No hay datos disponibles",
+                "emptyCounters": "No hay datos disponibles",
+                "emptyChart": "No hay datos disponibles",
+                "selectFeatures": "No hay regiones seleccionados, seleccione un precinto del cuadro de entrada de arriba para visualizar los detalles"
+            },
+            "download": {
+                "readmeDesc": "Describe el contenido de la descarga",
+                "baseLayerDesc": "Polígonos de la región GeoJSON",
+                "aggregatedLayerDesc": "Regiones GeoJSON con recuentos de eventos",
+                "aggregatedDataDesc": "Recuentos de eventos CSV por región",
+                "timeseriesDataDesc": "Recuentos de eventos CSV por región y mes",
+                "download": "Descargar",
+                "options": "Opciones de descarga",
+                "fileName": "mapa-eventos"
+            },
+            "error": {
+                "init": "Error al conectarse al servicio configurado. Verifique la configuración",
+                "counters": "Error de conexión al punto final de los contadores",
+                "chart": "Error de conexión al punto final del gráfico",
+                "table": "Error de conexión al extremo de la tabla",
+                "details": "Error de conexión al extremo de detalles"
+            }
+        }
+    }
+}

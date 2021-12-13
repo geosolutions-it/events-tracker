@@ -1,0 +1,9 @@
+*
+
+!dist/**/*
+!assets/**/*
+!configs/**/*
+!translations/**/*
+!scripts/**/*
+!.gitignore
+!LICENSE.txt

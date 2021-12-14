@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "@mapstore/framework/*": [
+                "./node_modules/mapstore/web/client/*"
+            ],
+            "@js/*": [
+                "./js/*"
+            ]
+        }
+    },
+    "include": [
+        "node_modules/mapstore/web/client/**/*",
+        "node_modules/@mapstore/project/**/*",
+        "js/**/*"
+    ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "mapstore-events-tracker",
+  "version": "1.0.4",
+  "description": "mapstore project",
+  "eslintConfig": {
+    "extends": [
+      "@mapstore/eslint-config-mapstore"
+    ],
+    "parserOptions": {
+      "babelOptions": {
+        "configFile": "./node_modules/mapstore/build/babel.config.js"
+      }
+    },
+    "globals": {
+      "__MAPSTORE_PROJECT_CONFIG__": false
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11",
+      "not UCAndroid 12.12"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "compile": "mapstore-project compile standard",
+    "postcompile": "node ./scripts/postCompile.js",
+    "create-data-dir": "node ./bin/mapstore-events-tracker.js create",
+    "lint": "eslint js --ext .jsx,.js",
+    "start": "mapstore-project start standard",
+    "test": "mapstore-project test standard",
+    "test:watch": "mapstore-project test:watch standard",
+    "prepack": "npm install && cross-env DATA_DIRECTORY_PATH=. npm run compile"
+  },
+  "bin": {
+    "mapstore-events-tracker": "bin/mapstore-events-tracker.js"
+  },
+  "devDependencies": {
+    "@mapstore/project": "1.0.20",
+    "@turf/area": "6.3.0",
+    "cross-env": "7.0.3",
+    "d3-scale": "3.3.0",
+    "dotenv": "10.0.0",
+    "karma": "6.3.2",
+    "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#v2021.02.00",
+    "mustache": "4.2.0",
+    "papaparse": "5.3.1"
+  },
+  "dependencies": {
+    "fs-extra": "9.0.1",
+    "rimraf": "2.5.2"
+  },
+  "mapstore": {
+    "apps": [
+      "js/apps"
+    ],
+    "html": [
+      ""
+    ],
+    "themes": [
+      "themes/"
+    ]
+  },
+  "author": "GeoSolutions",
+  "license": "BSD-2-Clause"
+}

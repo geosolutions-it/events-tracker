@@ -1,0 +1,71 @@
+{
+    "locale": "it-IT",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Eventi",
+            "cancel": "Annulla",
+            "errorInit": "Errore di Connessione",
+            "categories": {
+            },
+            "featureTypeName": "Regioni",
+            "feature": "Regione",
+            "featureKey": "region_name",
+            "tableRowName": " ",
+            "featureGroups": {},
+            "mapVisualizations": {
+                "feature": "Mappa della regione",
+                "hexagon": "Mappa densità evento (esagono)",
+                "square": "Mappa densità evento (quadrato)",
+                "location": "Mappa della posizione dell'evento"    
+            },
+            "prompts": {
+                "dateFrom": "Da:",
+                "dateTo": "A:",
+                "selectFeature": "Seleziona regioni...",
+                "normalBy": "Normalizzare per:",
+                "normalByArea": "Eventi per chilometro quadrato",
+                "normalByNone": "Nessuna",
+                "normalByPop": "Eventi per 1.000 residenti",
+                "population": "Popolazione",
+                "switchToLight": "Passa alla luce",
+                "switchToDark": "Passa al buio"
+            },
+            "labels": {
+                "count": "Conteggio",
+                "month": "Mese",
+                "builtWith": "Costruito con",
+                "time": "Tempo",
+                "table": "Tabella",
+                "detail": "Dettaglio",
+                "barChartTitle": "Regione contro Gruppo",
+                "barChartDescription": "Tabella di confronto",
+                "pageTitle": "Mappa degli eventi",
+                "mapVisualizationTitle": "Tipo di mappa",
+                "countersTitle": "Tipo di evento",
+                "chartTitle": "Grafico",
+                "featuresPanelTitle": "Informazioni sulle regioni",
+                "emptyPanel": "Nessun dato disponibile",
+                "emptyCounters": "Nessun dato disponibile",
+                "emptyChart": "Nessun dato disponibile",
+                "selectFeatures": "Non ci sono regioni selezionate, seleziona una regione dalla casella di input sopra per visualizzare i dettagli"
+            },
+            "download": {
+                "readmeDesc": "Descrive il contenuto del download",
+                "baseLayerDesc": "Poligoni della regione GeoJSON",
+                "aggregatedLayerDesc": "Regioni GeoJSON con conteggi di eventi",
+                "aggregatedDataDesc": "Conteggio eventi CSV per regione",
+                "timeseriesDataDesc": "Conteggio eventi CSV per regione e mese",
+                "download": "Scarica",
+                "options": "Opzioni di download:",
+                "fileName": "mappa-evento"
+            },
+            "error": {
+                "init": "Errore durante la connessione al servizio configurato. Verificare la configurazione",
+                "counters": "Errore di connessione all'endpoint dei contatori",
+                "chart": "Errore di connessione all'endpoint del grafico",
+                "table": "Errore di connessione all'endpoint della tabella",
+                "details": "Errore di connessione all'endpoint dei dettagli"
+            }
+        }
+    }
+}

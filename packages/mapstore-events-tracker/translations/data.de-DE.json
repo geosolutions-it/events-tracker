@@ -1,0 +1,71 @@
+{
+    "locale": "de-DE",
+    "messages": {
+        "msEventsTracker": {
+            "dataPoints": "Veranstaltungen",
+            "cancel": "Abbrechen",
+            "errorInit": "Verbindungsfehler",
+            "categories": {
+            },
+            "featureTypeName": "Regionen",
+            "feature": "Region",
+            "featureKey": "region_name",
+            "tableRowName": " ",
+            "featureGroups" : {},
+            "mapVisualizations": {
+                "feature": "Regionskarte",
+                "hexagon": "Ereignisdichtekarte (Sechseck)",
+                "square": "Ereignisdichtekarte (Quadrat)",
+                "location": "Karte des Veranstaltungsortes"
+            },
+            "prompts": {
+                "dateFrom": "Von:",
+                "dateTo": "To:",
+                "selectFeature": "Regionen auswählen...",
+                "normalBy": "Normalisieren um",
+                "normalByArea": "Ereignisse pro Quadratkilometer",
+                "normalByNone": "Keiner",
+                "normalByPop": "Veranstaltungen pro 1.000 Einwohner",
+                "population": "Bevölkerung",
+                "switchToLight": "Auf Licht umschalten",
+                "switchToDark": "Auf dunkel wechseln"
+            },
+            "labels": {
+                "count": "Zählen",
+                "month": "Monat",
+                "builtWith": "Gebaut mit",
+                "time": "Zeit",
+                "table": "Tabelle",
+                "detail": "Detail",
+                "barChartTitle": "Region versus Gruppe",
+                "barChartDescription": "Vergleichstabelle",
+                "pageTitle": "Veranstaltungskarte",
+                "mapVisualizationTitle": "Ereignistyp",
+                "countersTitle": "Kriminalitätstyp",
+                "chartTitle": "Diagramm",
+                "featuresPanelTitle": "Informationen zu Regionen",
+                "emptyPanel": "Keine Daten verfügbar",
+                "emptyCounters": "Keine Daten verfügbar",
+                "emptyChart": "Keine Daten verfügbar",
+                "selectFeatures": "Es sind keine Regionen ausgewählt. Bitte wählen Sie eine Region aus dem Eingabefeld oben aus, um die Details anzuzeigen"
+            },
+            "download": {
+                "readmeDesc": "Beschreibt den Inhalt des Downloads",
+                "baseLayerDesc": "GeoJSON-Regionspolygone",
+                "aggregatedLayerDesc": "GeoJSON-Regionen mit Ereigniszählungen",
+                "aggregatedDataDesc": "CSV-Ereigniszählungen nach Region",
+                "timeseriesDataDesc": "CSV-Ereigniszählungen nach Region und Monat",
+                "download": "Herunterladen",
+                "options": "Download-Optionen:",
+                "fileName": "event-karte"
+            },
+            "error": {
+                "init": "Fehler beim Verbinden mit dem konfigurierten Dienst. Bitte überprüfen Sie die Konfiguration",
+                "counters": "Verbindungsfehler zum Zähler-Endpunkt",
+                "chart": "Verbindungsfehler zum Diagrammendpunkt",
+                "table": "Verbindungsfehler zum Tabellenendpunkt",
+                "details": "Verbindungsfehler zum Detailendpunkt"
+            }
+        }
+    }
+}

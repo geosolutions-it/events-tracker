@@ -1,0 +1,143 @@
+{
+    "title": "MapStore Events Tracker",
+    "url": "/geoserver/wfs",
+    "featureTypeName": "...",
+    "defaultChartColor": "#0a5796",
+    "categories": [
+        {
+            "labelId": "categories-id",
+            "value": "...",
+            "color": "#ff33aa"
+        }
+    ],
+    "category": {
+        "key": "...",
+        "type": "..."
+    },
+    "date": {
+        "key": "...",
+        "type": "...",
+        "format": "..."
+    },
+    "feature": {
+        "key": "...",
+        "labelKey": "...",
+        "type": "...",
+        "group": "...",
+        "layer": {
+            "key": "",
+            "type": "vector",
+            "url": "/geoserver/wfs",
+            "params": {
+                "service": "WFS",
+                "typeName": "...",
+                "version": "1.1.0",
+                "request": "GetFeature",
+                "outputFormat": "application/json"
+            }
+        }
+    },
+    "mapVisualizations": [
+        {
+            "id": "...",
+            "labelId": "...",
+            "normalized": true,
+            "layers": [
+                {
+                    "type": "vector",
+                    "url": "/geoserver/wfs",
+                    "groupBy": {
+                        "keys": [
+                            "..."
+                        ],
+                        "categoryKey": "...",
+                        "valueKey": "..."
+                    },
+                    "params": {
+                        "service": "WFS",
+                        "typeName": "...",
+                        "version": "1.1.0",
+                        "request": "GetFeature",
+                        "outputFormat": "application/json"
+                    },
+                    "classification": {
+                        "type": "scaleQuantile",
+                        "domain": "...",
+                        "domainExtent": false,
+                        "normalize": true,
+                        "normalizePropertyKey": "normalizedCount",
+                        "range": [
+                            "#fef6ee",
+                            "#fedec2",
+                            "#fec69d",
+                            "#f2aa86",
+                            "#d29a81"
+                        ],
+                        "stylePropertyKey": "fillColor"
+                    },
+                    "style": {
+                        "fillColor": "#33ffaa",
+                        "fillOpacity": 0.75,
+                        "color": "ffffff",
+                        "opacity": 0,
+                        "weight": 0
+                    },
+                    "viewParamsMap": {
+                        "from": "...",
+                        "to": "...",
+                        "category": "..."
+                    },
+                    "pointerMovePopup": {
+                        "fields": [
+                            {
+                                "key": "..."
+                            },
+                            {
+                                "key": "...",
+                                "labelId": "..."
+                            }
+                        ]
+                    },
+                    "popup": {
+                        "title": true,
+                        "fields": [
+                            {
+                                "key": "...",
+                                "labelId": "..."
+                            },
+                            {
+                                "key": "...",
+                                "labelId": "...",
+                                "target": "feature"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "normalizerOptions": [
+        {
+            "labelId": "msEventsTracker.prompts.normalByPop",
+            "value": "pop",
+            "params": {
+                "multiplier": 1000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        },
+        {
+            "labelId": "msEventsTracker.prompts.normalByArea",
+            "value": "area",
+            "params": {
+                "multiplier": 1000000,
+                "numberParams": {
+                    "maximumFractionDigits": 4,
+                    "minimumFractionDigits": 4
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MapStore Events Tracker</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+        <link rel="stylesheet" id="theme_stylesheet" href="<%= htmlWebpackPlugin.files.css.find((fileName) => fileName.indexOf('default') !== -1) %>?v=<%= version %>" type='text/css'>
+        <link rel="stylesheet" href="assets/css/custom.css?v=<%= version %>-{mapstore-events-tracker-version}" />
+    </head>
+    <body class="mapstore-events-tracker" data-ms2-container="ms2">
+        <div id="container">
+            <div class="ms-main-event-container">
+                <div class="ms-main-event-content">
+                    <div class="ms-main-loader"></div>
+                    <div class="ms-main-event-text">Loading</div>
+                </div>
+            </div>
+        </div>
+        <script src="<%= htmlWebpackPlugin.files.js.find((fileName) => fileName.indexOf('app') !== -1) %>?v=<%= version %>"></script>
+        <script>
+            window.addEventListener('DOMContentLoaded', function() {
+                initMapStoreEventsTracker({
+                    mapConfigPath: 'configs/map.json',
+                    localConfigPath: 'configs/localConfig.json',
+                    viewerConfigPath: 'configs/viewerConfig.json',
+                    version: '{mapstore-events-tracker-version}'
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -34,8 +34,8 @@
                 "cfg": {
                     "logo": [
                         {
-                            "href": "https://www.geosolutionsgroup.com/",
-                            "src": "assets/img/geosolutions-logo-sm.png"
+                            "href": "/",
+                            "src": "assets/img/home.svg"
                         }
                     ]
                 }
@@ -203,8 +203,8 @@
                     "titleId": "msEventsTracker.labels.pageTitle",
                     "logo": [
                         {
-                            "href": "https://www.geosolutionsgroup.com/",
-                            "src": "assets/img/geosolutions-logo.png"
+                            "href": "/",
+                            "src": "assets/img/home.svg"
                         }
                     ]
                 }

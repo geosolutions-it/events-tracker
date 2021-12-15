@@ -20,6 +20,7 @@
                 "normalByPop": "Crimes per 1,000 residents"
             },
             "categories": {
+                "all": "All Crimes",
                 "murder": "Murder",
                 "robbery": "Robbery",
                 "burglary": "Burglary",

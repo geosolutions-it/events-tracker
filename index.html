@@ -1,18 +1,146 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Events Tracking Map Demo - GeoServer/PostGIS/MapStore</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Events Tracking Map Demo</title>
+  <link rel="icon" type="image/x-icon" href="denver/assets/img/favicon.ico">
+  <link rel="stylesheet" id="theme_stylesheet" href="denver/themes/default.css">
   <style>
     body {
-      font-family: "Noto Sans", sans-serif;
+      font-family: Noto Sans, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+    }
+
+    .mapstore-events-tracker .ms-viewer-header {
+      height: auto;
+      min-height: 50px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .ms-home-body {
+      max-width: 1024px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .ms-home-body ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ms-home-card {
+      margin: 16px;
+    }
+
+    .ms-home-card h2 {
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    .ms-home-card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .ms-home-preview {
+      width: 100%;
+      height: 128px;
+      background-color: #ddd;
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .ms-home-preview.denver {
+      background-image: url('denver/assets/img/screenshot.png');
+    }
+
+    .ms-home-preview.new-york {
+      background-image: url('new-york/assets/img/screenshot.png');
+    }
+
+    .ms-home-preview.nyc-311 {
+      background-image: url('nyc-311/assets/img/screenshot.png');
+    }
+
+    .ms-home-description {
+      padding: 8px;
+    }
+
+    .ms-viewer-header-right img {
+      max-height: 32px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .ms-viewer-header h1 {
+        display: none;
+      }
     }
   </style>
 </head>
-<body>
-  <h1>Events Tracking Map Demo - GeoServer/PostGIS/MapStore</h1>
-  <h2><a href="./geoserver">GeoServer</a></h2>
-  <h2><a href="./denver">Denver - Crime Map</a></h2>
-  <h2><a href="./new-york">New York - Crime Map</a></h2>
-  <h2><a href="./nyc-311">New York - 311 SR Map</a></h2>
+
+<body class="mapstore-events-tracker">
+  <header>
+    <div class="ms-viewer-header">
+      <div class="ms-viewer-header-left">
+        <a href="https://www.geosolutionsgroup.com/">
+          <img src="denver/assets/img/geosolutions-logo.png">
+        </a>
+        <h1>Events Tracking Map Demo</h1>
+      </div>
+      <div class="ms-viewer-header-right">
+        <div><a href="./geoserver"><img src="denver/assets/img/GeoServer_Logo.svg"></a></div>
+      </div>
+    </div>
+  </header>
+  <div class="ms-home-body">
+    <ul>
+      <li>
+        <a href="./denver">
+          <div class="ms-home-card shadow-soft">
+            <div class="ms-home-preview denver"></div>
+            <div class="ms-home-description">
+              <h2>Denver - Crime Map</h2>
+              <p></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="./new-york">
+          <div class="ms-home-card shadow-soft">
+            <div class="ms-home-preview new-york"></div>
+            <div class="ms-home-description">
+              <h2>New York - Crime Map</h2>
+              <p></p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="./nyc-311">
+          <div class="ms-home-card shadow-soft">
+            <div class="ms-home-preview nyc-311"></div>
+            <div class="ms-home-description">
+              <h2>New York - 311 SR Map</h2>
+              <p></p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </body>
+
 </html>

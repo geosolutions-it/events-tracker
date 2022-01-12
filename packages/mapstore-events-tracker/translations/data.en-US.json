@@ -28,7 +28,8 @@
                 "normalByPop": "Events per 1,000 residents",
                 "population": "Population",
                 "switchToLight": "Switch to light",
-                "switchToDark": "Switch to dark"
+                "switchToDark": "Switch to dark",
+                "viewTutorial": "View tutorial"
             },
             "labels": {
                 "count": "Count",

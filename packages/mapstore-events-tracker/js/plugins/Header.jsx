@@ -56,7 +56,7 @@ function Header({
                     <Message msgId={titleId} />
                 </h1>}
             </div>
-            <div className="ms-viewer-header-right">
+            <div className="ms-viewer-header-right" id="date-range">
                 {!hideDate && <div className="ms-viewer-header-date">
                     {dateFrom === dateTo ? dateFrom : `${dateFrom} - ${dateTo}`}
                 </div>}

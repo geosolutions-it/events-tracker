@@ -7,7 +7,7 @@ import {
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-function Menu({ menuItems}) {
+function Menu({ menuItems }) {
     return (
         <DropdownButton
             id="dropdown-menu-button"

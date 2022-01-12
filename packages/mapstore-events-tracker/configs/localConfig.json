@@ -253,6 +253,7 @@
             },
             {
                 "name": "ZoomOut",
+                "name": "ZoomOut",
                 "override": {
                     "Toolbar": {
                         "alwaysVisible": true
@@ -297,6 +298,28 @@
                 "override": {
                     "ViewerLayout": {
                         "target": "center",
+                        "priority": 1
+                    }
+                }
+            }, {
+                "name": "Tutorial",
+
+                "cfg": {
+                    "allowClicksThruHole": false,
+                    "containerPosition": "menu",
+                    "preset": "empty",
+                    "presetList": {
+                        "empty": [],
+                        "dashboard_tutorial_list": [
+                            {
+                                "translation": "covidIntro",
+                                "selector": "#page-dashboard-view"
+                            }
+                        ]
+                    }
+                }, "override": {
+                    "Tutorial": {
+                        "target": "menu",
                         "priority": 1
                     }
                 }

@@ -39,40 +39,6 @@
         },
         "search": {
             "addressSearch": "Search by precinct number"
-        },
-        "tutorial": {
-            "introTutorial": {
-                "title": "Dashboard Tutorial",
-                "text": "Overview of dashboard functionalities"
-            },
-            "mapIntroduction": {
-                "title": "Crime Density Map",
-                "text": "The map visualizes crime density in the locality"
-            },
-            "mapVisualizationSelector": {
-                "title": "Map Visualization Selector",
-                "text": "Select different ways of visualizing the map"
-            },
-            "counters": {
-                "title": "Crime Count",
-                "text": "Count of different categories of crime"
-            },
-            "mainChart": {
-                "title": "Crime Count Per Month",
-                "text": "A line chart visualizing crime count against corresponding months these crimes were committed"
-            },
-            "mainTable": {
-                "title": "Crime Count Per Precinct",
-                "text": "A table visualizing the total crime count in each corresponding precinct"
-            },
-            "viewerNormalizer": {
-                "title": "Normalize Data",
-                "text": "Normalize data by listed denominator"
-            },
-            "dateRange": {
-                "title": "Date Range",
-                "text": "Display crime data based on the selected date range"
-            }
         }
     }
 }

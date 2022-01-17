@@ -161,6 +161,47 @@
                         "priority": 1
                     }
                 }
+            },
+            {
+                "name": "Tutorial",
+                "cfg": {
+                    "allowClicksThruHole": false,
+                    "preset": "dashboard_tutorial_list",
+                    "presetList": {
+                        "dashboard_tutorial_list": [
+                            {
+                                "translation": "introTutorial",
+                                "selector": "#intro-tutorial"
+                            },
+                            {
+                                "translation": "mapIntroduction",
+                                "selector": "#map",
+                                "position": "left"
+                            }, {
+                                "translation": "mapVisualizationSelector",
+                                "selector": "#map-visualisation-selector"
+                            }, {
+                                "translation": "counters",
+                                "selector": "#tutorial-counters",
+                                "position": "left"
+                            }, {
+                                "translation": "mainChart",
+                                "selector": "#tutorial-main-chart",
+                                "position": "top"
+                            }, {
+                                "translation": "mainTable",
+                                "selector": "#tutorial-table",
+                                "position": "right"
+                            }, {
+                                "translation": "viewerNormalizer",
+                                "selector": "#viewer-normalizer"
+                            }, {
+                                "translation": "dateRange",
+                                "selector": "#date-range"
+                            }
+                        ]
+                    }
+                }
             }
         ],
         "dashboard-view": [
@@ -253,7 +294,6 @@
             },
             {
                 "name": "ZoomOut",
-                "name": "ZoomOut",
                 "override": {
                     "Toolbar": {
                         "alwaysVisible": true
@@ -303,24 +343,42 @@
                 }
             }, {
                 "name": "Tutorial",
-
                 "cfg": {
                     "allowClicksThruHole": false,
-                    "containerPosition": "menu",
-                    "preset": "empty",
+                    "preset": "dashboard_tutorial_list",
                     "presetList": {
-                        "empty": [],
                         "dashboard_tutorial_list": [
                             {
-                                "translation": "covidIntro",
-                                "selector": "#page-dashboard-view"
+                                "translation": "introTutorial",
+                                "selector": "#intro-tutorial"
+                            },
+                            {
+                                "translation": "mapIntroduction",
+                                "selector": "#map",
+                                "position": "left"
+                            }, {
+                                "translation": "mapVisualizationSelector",
+                                "selector": "#map-visualisation-selector"
+                            }, {
+                                "translation": "counters",
+                                "selector": "#tutorial-counters",
+                                "position": "left"
+                            }, {
+                                "translation": "mainChart",
+                                "selector": "#tutorial-main-chart",
+                                "position": "top"
+                            }, {
+                                "translation": "mainTable",
+                                "selector": "#tutorial-table",
+                                "position": "right"
+                            }, {
+                                "translation": "viewerNormalizer",
+                                "selector": "#viewer-normalizer"
+                            }, {
+                                "translation": "dateRange",
+                                "selector": "#date-range"
                             }
                         ]
-                    }
-                }, "override": {
-                    "Tutorial": {
-                        "target": "menu",
-                        "priority": 1
                     }
                 }
             }

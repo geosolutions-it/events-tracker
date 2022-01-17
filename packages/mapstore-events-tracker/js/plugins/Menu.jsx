@@ -26,7 +26,6 @@ Menu.contextTypes = {
     loadedPlugins: PropTypes.object
 };
 
-
 Menu.defaultProps = {
     order: ['Share', 'ThemeVariantSwitch', 'Download']
 };

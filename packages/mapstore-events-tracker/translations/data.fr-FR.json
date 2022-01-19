@@ -66,6 +66,40 @@
                 "table": "Erreur de connexion au point de terminaison de la table",
                 "details": "Erreur de connexion au point de terminaison des détails"
             }
+        },
+        "tutorial": {
+            "introTutorial": {
+                "title": "Tutoriel du tableau de bord",
+                "text": "Présentation des fonctionnalités du tableau de bord"
+            },
+            "mapIntroduction": {
+                "title": "Carte de la densité de la criminalitép",
+                "text": "La carte visualise la densité de la criminalité dans la localité"
+            },
+            "mapVisualizationSelector": {
+                "title": "Sélecteur de visualisation de carte",
+                "text": "Sélectionnez différentes façons de visualiser la carte"
+            },
+            "counters": {
+                "title": "Nombre de crimes",
+                "text": "Décompte des différentes catégories de crimes"
+            },
+            "mainChart": {
+                "title": "Nombre de crimes par mois",
+                "text": "Un graphique linéaire visualisant le nombre de crimes par rapport aux mois correspondants où ces crimes ont été commis"
+            },
+            "mainTable": {
+                "title": "Nombre de crimes par circonscription",
+                "text": "Un tableau visualisant le nombre total de crimes dans chaque quartier correspondant"
+            },
+            "viewerNormalizer": {
+                "title": "Normalize Data",
+                "text": "Normaliser les données"
+            },
+            "dateRange": {
+                "title": "Plage de dates",
+                "text": "Afficher les données sur la criminalité en fonction de la plage de dates sélectionnée"
+            }
         }
     }
 }

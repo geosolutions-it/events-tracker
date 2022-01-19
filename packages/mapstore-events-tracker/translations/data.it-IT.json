@@ -66,6 +66,40 @@
                 "table": "Errore di connessione all'endpoint della tabella",
                 "details": "Errore di connessione all'endpoint dei dettagli"
             }
+        },
+        "tutorial": {
+            "introTutorial": {
+                "title": "Esercitazione sulla dashboard",
+                "text": "Panoramica delle funzionalità del dashboard\n"
+            },
+            "mapIntroduction": {
+                "title": "Mappa della densità del crimine",
+                "text": "La mappa visualizza la densità del crimine in una località"
+            },
+            "mapVisualizationSelector": {
+                "title": "Selettore di visualizzazione mappa",
+                "text": "Seleziona diversi modi di visualizzare la mappa"
+            },
+            "counters": {
+                "title": "Conteggio totale del crimine",
+                "text": "Conteggio di diverse categorie di reati"
+            },
+            "mainChart": {
+                "title": "Conteggio del crimine al mese",
+                "text": "Un grafico a linee che visualizza il conteggio dei crimini nei mesi corrispondenti in cui questi crimini sono stati commessi"
+            },
+            "mainTable": {
+                "title": "Conteggio crimini per distretto",
+                "text": "Una tabella che visualizza il conteggio totale dei crimini in ogni distretto corrispondente"
+            },
+            "viewerNormalizer": {
+                "title": "Normalizza i dati",
+                "text": "Normalizza i dati per denominatore elencato"
+            },
+            "dateRange": {
+                "title": "Intervallo di date",
+                "text": "Visualizza i dati sulla criminalità in base a un intervallo di date selezionato"
+            }
         }
     }
 }

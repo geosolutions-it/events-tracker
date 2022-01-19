@@ -75,7 +75,7 @@
             },
             "mapIntroduction": {
                 "title": "Crime Density Map",
-                "text": "The map visualizes crime density in the locality"
+                "text": "The map visualizes crime density in a locality"
             },
             "mapVisualizationSelector": {
                 "title": "Map Visualization Selector",
@@ -99,7 +99,7 @@
             },
             "dateRange": {
                 "title": "Date Range",
-                "text": "Display crime data based on the selected date range"
+                "text": "Display crime data based on a selected date range"
             }
         }
     }

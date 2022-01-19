@@ -65,24 +65,6 @@ function OLFeaturesPopup({
         };
     }
 
-    function getPrecinctTotalCount(currentPopupData) {
-        let totalCount = 0;
-        let popupData = [...currentPopupData];
-        for (let popup of popupData) {
-            if (popup?.props?.fields) {
-                for (let field of popup.props.fields) {
-                    if (field.id && Number.isInteger(field.value)) {
-                        totalCount = totalCount + field.value;
-
-                    }
-                }
-                const totalCountIndex = popup.props.fields.findIndex(item => !item?.id && item.labelId);
-                popup.props.fields[totalCountIndex].value = totalCount;
-            }
-        }
-        return popupData;
-    }
-
     function getPopupProps({
         layer,
         featureProperties,
@@ -224,18 +206,14 @@ function OLFeaturesPopup({
         };
     }, [map]);
 
-    const popupsData = getPrecinctTotalCount(popups);
     return map
         ? (
             <>
-                {
-                    popupsData && <PopupSupport
-                        map={map}
-                        popups={popupsData}
-                        onPopupClose={handleClosePopup}
-                    />
-                }
-
+                <PopupSupport
+                    map={map}
+                    popups={popups}
+                    onPopupClose={handleClosePopup}
+                />
             </>
         )
         : null;

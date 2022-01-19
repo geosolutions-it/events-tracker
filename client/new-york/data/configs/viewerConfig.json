@@ -369,7 +369,8 @@
                     },
                     "viewParamsMap": {
                         "from": "mo_min",
-                        "to": "mo_max"
+                        "to": "mo_max",
+                        "category": "event_type"
                     },
                     "pointerMovePopup": {
                         "fields": [

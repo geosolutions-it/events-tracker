@@ -66,6 +66,40 @@
                 "table": "Verbindungsfehler zum Tabellenendpunkt",
                 "details": "Verbindungsfehler zum Detailendpunkt"
             }
+        },
+        "tutorial": {
+            "introTutorial": {
+                "title": "Dashboard-Tutorial",
+                "text": "Übersicht der Dashboard-Funktionalitäten"
+            },
+            "mapIntroduction": {
+                "title": "Karte der Kriminalitätsdichte",
+                "text": "Die Karte visualisiert die Kriminalitätsdichte in einem Ort"
+            },
+            "mapVisualizationSelector": {
+                "title": "Kartenvisualisierungsauswahl",
+                "text": "Wählen Sie verschiedene Möglichkeiten zur Visualisierung der Karte"
+            },
+            "counters": {
+                "title": "Kriminalitätszählung",
+                "text": "Zählung verschiedener Kategorien von Straftaten"
+            },
+            "mainChart": {
+                "title": "Verbrechenszahl pro Monat",
+                "text": "Ein Liniendiagramm, das die Anzahl der Verbrechen im Vergleich zu den entsprechenden Monaten darstellt, in denen diese Verbrechen begangen wurden"
+            },
+            "mainTable": {
+                "title": "Kriminalitätszählung pro Bezirk",
+                "text": "Eine Tabelle, die die Gesamtkriminalität in jedem entsprechenden Bezirk visualisiert"
+            },
+            "viewerNormalizer": {
+                "title": "Daten normalisieren",
+                "text": "Daten nach aufgelistetem Nenner normalisieren"
+            },
+            "dateRange": {
+                "title": "Datumsbereich",
+                "text": "Zeigen Sie Kriminalitätsdaten basierend auf einem ausgewählten Datumsbereich an"
+            }
         }
     }
 }

@@ -35,7 +35,12 @@
                     "logo": [
                         {
                             "href": "/",
-                            "src": "assets/img/home.svg"
+                            "src": "assets/img/home-light.svg",
+                            "theme": "light"
+                        }, {
+                            "href": "/",
+                            "src": "assets/img/home.svg",
+                            "theme": "dark"
                         }
                     ]
                 }
@@ -204,7 +209,12 @@
                     "logo": [
                         {
                             "href": "/",
-                            "src": "assets/img/home.svg"
+                            "src": "assets/img/home-light.svg",
+                            "theme": "light"
+                        }, {
+                            "href": "/",
+                            "src": "assets/img/home.svg",
+                            "theme": "dark"
                         }
                     ]
                 }

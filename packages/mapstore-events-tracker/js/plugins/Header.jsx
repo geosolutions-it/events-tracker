@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, { useEffect} from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
@@ -34,24 +34,22 @@ function Header({
     hideDate,
     width,
     order,
-    titleId
+    titleId,
+    themeVariant
 }, context) {
     const { loadedPlugins } = context;
     const configuredItems = usePluginItems({ items, loadedPlugins });
     const dateFrom = dateRange?.from?.value && moment(dateRange.from.value).format(dateFormat);
     const dateTo = dateRange?.to?.value && moment(dateRange.to.value).format(dateFormat);
+    const selectedTheme = themeVariant === 'true' ? logo.find(entry => entry.theme === 'dark') : logo.find(entry => entry.theme === 'light');
     return (
         <div
             className="ms-viewer-header"
         >
             <div className="ms-viewer-header-left">
-                {logo.map((entry) => {
-                    return (
-                        <a href={entry.href}>
-                            <img src={entry.src}/>
-                        </a>
-                    );
-                })}
+                <a href={selectedTheme.href}>
+                    <img src={selectedTheme.src}/>
+                </a>
                 {titleId && <h1>
                     <Message msgId={titleId} />
                 </h1>}
@@ -81,7 +79,8 @@ Header.propTypes = {
     dateFormat: PropTypes.string,
     hideDate: PropTypes.bool,
     order: PropTypes.array,
-    titleId: PropTypes.string
+    titleId: PropTypes.string,
+    themeVariant: PropTypes.string
 };
 
 Header.defaultProps = {
@@ -92,9 +91,14 @@ Header.defaultProps = {
 const ConnectedHeader = connect(
     createSelector([
         getDateRange,
-        state => state?.router?.location
-    ], (dateRange) => ({
-        dateRange
+        state => state?.router?.location,
+        () => {
+            return window.localStorage.getItem('ms.themeVariantEnabled');
+        }
+    ], (dateRange, location, themeVariant) => ({
+        dateRange,
+        location,
+        themeVariant
     })),
     {}
 )(withResizeDetector(Header));

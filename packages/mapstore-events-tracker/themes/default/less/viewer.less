@@ -18,9 +18,14 @@
 @ms-viewer-scrollbar-thumb-bg: @ms-main-variant-bg;
 @ms-viewer-scrollbar-thumb-hover-bg: @ms-main-hover-bg;
 
+@ms-counter-hover-bg: #1B9CFC;
+@ms-counter-hover-color: #ffffff;
+
 #ms-components-theme(@themevars) {
     .ms-viewer-counters {
         .ms-viewer-counter {
+            border-radius: 5px;
+            overflow: hidden;
             > a {
                 .color-var(@theme-vars[main-color]);
             }
@@ -28,6 +33,13 @@
             &.selected * {
                 .color-var(@theme-vars[primary-contrast]);
                 .background-color-var(@theme-vars[primary]);
+            }
+            &:hover {
+                background-color: @ms-counter-hover-bg;
+                box-shadow: 0 5px 20px 0 rgba(0,0,0,0.35);
+                span {
+                    color: @ms-counter-hover-color;
+                }
             }
             
         }

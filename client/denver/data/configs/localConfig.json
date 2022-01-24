@@ -191,6 +191,47 @@
                 "cfg": {
                     "href": "https://www.denvergov.org/opendata/search"
                 }
+            },
+            {
+                "name": "Tutorial",
+                "cfg": {
+                    "allowClicksThruHole": false,
+                    "preset": "dashboard_tutorial_list",
+                    "presetList": {
+                        "dashboard_tutorial_list": [
+                            {
+                                "translation": "introTutorial",
+                                "selector": "#intro-tutorial"
+                            },
+                            {
+                                "translation": "mapIntroduction",
+                                "selector": "#map",
+                                "position": "left"
+                            }, {
+                                "translation": "mapVisualizationSelector",
+                                "selector": "#map-visualisation-selector"
+                            }, {
+                                "translation": "counters",
+                                "selector": "#tutorial-counters",
+                                "position": "left"
+                            }, {
+                                "translation": "mainChart",
+                                "selector": "#tutorial-main-chart",
+                                "position": "top"
+                            }, {
+                                "translation": "mainTable",
+                                "selector": "#tutorial-table",
+                                "position": "right"
+                            }, {
+                                "translation": "viewerNormalizer",
+                                "selector": "#viewer-normalizer"
+                            }, {
+                                "translation": "dateRange",
+                                "selector": "#date-range"
+                            }
+                        ]
+                    }
+                }
             }
         ],
         "dashboard-view": [
@@ -359,6 +400,47 @@
                 "name": "DataAttribution",
                 "cfg": {
                     "href": "https://www.denvergov.org/opendata/search"
+                }
+            },
+            {
+                "name": "Tutorial",
+                "cfg": {
+                    "allowClicksThruHole": false,
+                    "preset": "dashboard_tutorial_list",
+                    "presetList": {
+                        "dashboard_tutorial_list": [
+                            {
+                                "translation": "introTutorial",
+                                "selector": "#intro-tutorial"
+                            },
+                            {
+                                "translation": "mapIntroduction",
+                                "selector": "#map",
+                                "position": "left"
+                            }, {
+                                "translation": "mapVisualizationSelector",
+                                "selector": "#map-visualisation-selector"
+                            }, {
+                                "translation": "counters",
+                                "selector": "#tutorial-counters",
+                                "position": "left"
+                            }, {
+                                "translation": "mainChart",
+                                "selector": "#tutorial-main-chart",
+                                "position": "top"
+                            }, {
+                                "translation": "mainTable",
+                                "selector": "#tutorial-table",
+                                "position": "right"
+                            }, {
+                                "translation": "viewerNormalizer",
+                                "selector": "#viewer-normalizer"
+                            }, {
+                                "translation": "dateRange",
+                                "selector": "#date-range"
+                            }
+                        ]
+                    }
                 }
             }
         ]

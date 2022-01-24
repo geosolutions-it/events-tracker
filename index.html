@@ -77,9 +77,25 @@
     .ms-home-description {
       padding: 8px;
     }
-
+    .ms-card-call-to-action {
+      text-align: right;
+    }
     .ms-viewer-header-right img {
       max-height: 32px;
+    }
+
+    .ms-home-card:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .ms-project-description {
+      margin: 16px;
+    }
+    .ms-project-description li {
+      margin-left: 20px;
+    }
+    .ms-project-description li {
+      list-style-type: initial;
     }
 
     @media only screen and (max-width: 600px) {
@@ -99,12 +115,21 @@
         </a>
         <h1>Events Tracking Map Demo</h1>
       </div>
-      <div class="ms-viewer-header-right">
-        <div><a href="./geoserver"><img src="denver/assets/img/GeoServer_Logo.svg"></a></div>
-      </div>
     </div>
   </header>
   <div class="ms-home-body">
+    <div class="ms-project-description">
+    <h3>Crime Data Dashboard</h3>
+    <p>
+      The crime data dashboard is a collection of infographics outlining data about criminal activities in the listed cities. The crime data includes the following;
+    </p>
+      <ul>
+        <li>Comparable Count of various crimes per precinct</li>
+        <li>Map displaying crime density</li>
+        <li>A line chart showing crime count over time</li>
+        <li>And a count of various crime by category</li>
+      </ul>
+    </div>
     <ul>
       <li>
         <a href="./denver">
@@ -112,7 +137,10 @@
             <div class="ms-home-preview denver"></div>
             <div class="ms-home-description">
               <h2>Denver - Crime Map</h2>
-              <p></p>
+              <p>Crime data of the city of Denver</p>
+              <div class="ms-card-call-to-action">
+                <button class="btn btn-primary">View</button>
+              </div>
             </div>
           </div>
         </a>
@@ -123,7 +151,10 @@
             <div class="ms-home-preview new-york"></div>
             <div class="ms-home-description">
               <h2>New York - Crime Map</h2>
-              <p></p>
+              <p>Crime data of New York City</p>
+              <div class="ms-card-call-to-action">
+                <button class="btn btn-primary">View</button>
+              </div>
             </div>
           </div>
         </a>
@@ -134,7 +165,10 @@
             <div class="ms-home-preview nyc-311"></div>
             <div class="ms-home-description">
               <h2>New York - 311 SR Map</h2>
-              <p></p>
+              <p>Crime data of New York - 311 Service Request Map</p>
+              <div class="ms-card-call-to-action">
+                <button class="btn btn-primary">View</button>
+              </div>
             </div>
           </div>
         </a>

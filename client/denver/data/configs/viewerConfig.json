@@ -402,7 +402,8 @@
                     },
                     "viewParamsMap": {
                         "from": "mo_min",
-                        "to": "mo_max"
+                        "to": "mo_max",
+                        "category": "crime_type"
                     },
                     "pointerMovePopup": {
                         "fields": [

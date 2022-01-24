@@ -6,7 +6,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, { useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';

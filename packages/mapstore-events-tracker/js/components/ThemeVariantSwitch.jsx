@@ -29,11 +29,12 @@ function setThemeVariantEnabled(enabled) {
     }
 }
 
-function ThemeVariantSwitch({theme}) {
+function ThemeVariantSwitch({ theme, onCheckThemeUpdate }) {
     const [enabled, setEnabled] = useState(isThemeVariantEnabled());
     function handleThemeSwitch() {
         setEnabled(!enabled);
         setThemeVariantEnabled(!enabled);
+        onCheckThemeUpdate();
     }
     return (
         <>

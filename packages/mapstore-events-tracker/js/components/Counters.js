@@ -57,7 +57,7 @@ function Counters({
     counterClassName
 }) {
     return (
-        <ul className="ms-viewer-counters" style={style}>
+        <ul className="ms-viewer-counters" id="tutorial-counters" style={style}>
             {options?.map((option, key) => {
                 return (
                     <Counter

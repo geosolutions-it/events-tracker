@@ -25,7 +25,7 @@ function Normalizer({
 }) {
 
     return (
-        <div className="ms-viewer-normalizer" style={style}>
+        <div className="ms-viewer-normalizer" id="viewer-normalizer" style={style}>
             <label><Message msgId="msEventsTracker.prompts.normalBy" /></label>
             <Select
                 value={{

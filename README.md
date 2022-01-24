@@ -85,3 +85,6 @@ Windows machine
 - Ubuntu 20.04.2 LTS (WSL 2 distro)
 - Docker version 20.10.10, build b485636
 - docker-compose version 1.29.2, build 5becea4c
+
+> :warning: **Known Docker issues in Apple M1 computers**: The project might have difficulties running in computers running Apple M1 chips. 
+> [Here](https://docs.docker.com/desktop/mac/apple-silicon/) are documented some known issues with Docker in Apple M1 computers 

@@ -66,6 +66,40 @@
                 "table": "Error de conexión al extremo de la tabla",
                 "details": "Error de conexión al extremo de detalles"
             }
+        },
+        "tutorial": {
+            "introTutorial": {
+                "title": "Tutorial del tablero",
+                "text": "Descripción general de las funciones del tablero"
+            },
+            "mapIntroduction": {
+                "title": "Mapa de Densidad Criminal",
+                "text": "El mapa visualiza la densidad delictiva en una localidad"
+            },
+            "mapVisualizationSelector": {
+                "title": "Selector de visualización de mapas",
+                "text": "Seleccionar diferentes formas de visualizar el mapa"
+            },
+            "counters": {
+                "title": "Recuento de delitos",
+                "text": "Recuento de diferentes categorías de delitos."
+            },
+            "mainChart": {
+                "title": "Recuento de delitos por mes",
+                "text": "Un gráfico de líneas que visualiza el recuento de delitos contra los meses correspondientes en que se cometieron estos delitos"
+            },
+            "mainTable": {
+                "title": "Recuento de delitos por recinto",
+                "text": "Una tabla que visualiza el conteo total de delitos en cada recinto correspondiente"
+            },
+            "viewerNormalizer": {
+                "title": "Normalizar datos",
+                "text": "Normalizar datos por denominador enumerado"
+            },
+            "dateRange": {
+                "title": "Rango de fechas",
+                "text": "Mostrar datos de delitos en función de un intervalo de fechas seleccionado\n"
+            }
         }
     }
 }

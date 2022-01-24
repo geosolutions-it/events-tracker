@@ -68,7 +68,7 @@ function FeaturesPanelPlugin({
         ? ConnectedFeaturesTable
         : ConnectedFeaturesDetail;
     return (
-        <div className="ms-features-panel">
+        <div className="ms-features-panel" id="tutorial-table">
             <div className="ms-box" >
                 <div className="ms-features-panel-content">
                     <Nav bsStyle="tabs" activeKey={activeTab}>

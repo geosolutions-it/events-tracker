@@ -44,7 +44,7 @@ function MapVisualizationPlugin({
     }
     return (
         <div
-            className="ms-map-visualization"
+            className="ms-map-visualization" id="map-visualisation-selector"
         >
             <div>
                 <Select

@@ -36,7 +36,7 @@ function ChartPlugin({
 }, { messages }) {
     const isEmpty = data.length === 0;
     return (
-        <div className="ms-chart-container">
+        <div id="tutorial-main-chart" className="ms-chart-container">
             <div className="ms-box">
                 {!isEmpty && <ResponsiveChart
                     layout={{

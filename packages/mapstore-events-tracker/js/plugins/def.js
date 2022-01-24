@@ -13,6 +13,7 @@ import ToolbarPlugin from '@mapstore/framework/plugins/Toolbar';
 import ZoomInPlugin from '@mapstore/framework/plugins/ZoomIn';
 import ZoomOutPlugin from '@mapstore/framework/plugins/ZoomOut';
 
+
 // custom plugins
 import ChartPlugin from '@js/plugins/Chart';
 import CountersPlugin from '@js/plugins/Counters';
@@ -31,6 +32,7 @@ import SharePlugin from '@js/plugins/Share';
 import ThemeVariantSwitchPlugin from '@js/plugins/ThemeVariantSwitch';
 import DownloadPlugin from '@js/plugins/Download';
 import DataAttributionPlugin from '@js/plugins/DataAttribution';
+import TutorialPlugin from '@js/plugins/Tutorial';
 
 // list of all the plugins and requires available for the application
 export const plugins = {
@@ -55,7 +57,8 @@ export const plugins = {
     SharePlugin,
     ThemeVariantSwitchPlugin,
     DownloadPlugin,
-    DataAttributionPlugin
+    DataAttributionPlugin,
+    TutorialPlugin
 };
 
 // the requires are javascript functions, component or object

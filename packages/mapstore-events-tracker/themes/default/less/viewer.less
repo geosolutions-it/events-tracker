@@ -11,8 +11,8 @@
     fill: var(@value, @fallback) if(@important, ~'!important', );
 }
 
-@ms-viewer-header-color: @ms-main-bg;
-@ms-viewer-header-bg: @ms-main-color;
+@ms-viewer-header-color: #333333;
+@ms-viewer-header-bg: #ffffff;
 
 @ms-viewer-scrollbar-bg: #f8f8f8;
 @ms-viewer-scrollbar-thumb-bg: @ms-main-variant-bg;
@@ -39,6 +39,7 @@
         .color-var(@viewer-color);
         .background-color-var(@viewer-bg);
         .border-bottom-color-var(@theme-vars[main-border-color]);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
     }
 
     .ms-chart-container {

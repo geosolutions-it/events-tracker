@@ -14,7 +14,8 @@ import {
     SET_DETAIL_VALUES,
     SET_PREVIOUS_QUERY,
     LOADING_SECTION,
-    SET_SECTION_ERROR
+    SET_SECTION_ERROR,
+    THEME_UPDATE
 } from '@js/actions/viewer';
 
 import { RequestId } from '@js/utils/ApiUtils';
@@ -83,6 +84,12 @@ function viewer(state = {}, action) {
         return {
             ...state,
             previousQuery: action.query
+        };
+    }
+    case THEME_UPDATE: {
+        return {
+            ...state,
+            themeUpdate: action.themeUpdate
         };
     }
     default:

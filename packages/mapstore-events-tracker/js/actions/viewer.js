@@ -14,6 +14,7 @@ export const SET_DETAIL_VALUES = 'VIEWER:SET_DETAIL_VALUES';
 export const SET_PREVIOUS_QUERY = 'VIEWER:SET_PREVIOUS_QUERY';
 export const LOADING_SECTION = 'VIEWER:LOADING_SECTION';
 export const SET_SECTION_ERROR = 'VIEWER:SET_SECTION_ERROR';
+export const THEME_UPDATE = 'VIEWER:THEME_UPDATE';
 
 export const initViewer = (payload) => ({
     type: INIT_VIEWER,
@@ -55,3 +56,9 @@ export const setSectionError = (section, error) => ({
     section,
     error
 });
+
+export const checkThemeUpdate = () => ({
+    type: THEME_UPDATE,
+    themeUpdate: localStorage.getItem('ms.themeVariantEnabled')
+});
+

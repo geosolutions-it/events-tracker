@@ -62,7 +62,6 @@ function FeaturesTable({
                         );
                     })}
                     <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -104,11 +103,6 @@ function FeaturesTable({
                                             : null;
                                     })}
                                 </svg>
-                            </td>
-                            <td>
-                                <a href={`#/?feature-viz=detail&feature=${row.pct.value}`}>
-                                    Details
-                                </a>
                             </td>
                         </tr>
                     );

@@ -13,6 +13,7 @@ import max from 'lodash/max';
 import isNumber from 'lodash/isNumber';
 import Message from '@mapstore/framework/components/I18N/Message';
 import Number from '@mapstore/framework/components/I18N/Number';
+import { hashLocationToHref } from '@js/utils/LocationUtils';
 
 /**
  * Shows a table with checkbox to select the row and an inline bar chart
@@ -22,7 +23,9 @@ import Number from '@mapstore/framework/components/I18N/Number';
  */
 function FeaturesTable({
     data,
-    numberParams
+    numberParams,
+    location,
+    onUpdateQuery
 }) {
     const {
         rows = [],
@@ -66,14 +69,24 @@ function FeaturesTable({
                 {rows.map((row, idx) => {
                     const rowProps = row['@props'] || {};
                     return (
-                        <tr key={idx} className={rowProps.selected ? 'info' : ''}>
+                        <tr onClick={()=> onUpdateQuery(
+                            hashLocationToHref({
+                                location,
+                                query: {
+                                    feature: row.pct.value,
+                                    'feature-viz': 'detail'
+                                },
+                                noHash: true,
+                                replaceQuery: true
+                            })
+                        )} key={idx} className={rowProps.selected ? 'info' : ''}>
                             <td>
                                 <a href={rowProps.selectedHref}><Glyphicon glyph={rowProps.selected ? 'check' : 'unchecked'}/></a>
                             </td>
                             {cols.map(({ value }) => {
                                 const label = row[value]?.label || row[value]?.value || row[value] || 0;
                                 return (
-                                    <td key={value}>
+                                    <td>
                                         {isNumber(label) ? <Number value={label} numberParams={numberParams}/> : label}
                                     </td>
                                 );

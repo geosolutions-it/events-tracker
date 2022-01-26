@@ -32,11 +32,16 @@ import { RequestId } from '@js/utils/ApiUtils';
 const ConnectedFeaturesTable = connect(
     createSelector([
         getTableData,
-        getNumberParams
-    ], (data, numberParams) => ({
+        getNumberParams,
+        state => state?.router?.location
+    ], (data, numberParams, location) => ({
         data,
-        numberParams
-    }))
+        numberParams,
+        location
+    })),
+    {
+        onUpdateQuery: push
+    }
 )(FeaturesTable);
 
 const ConnectedFeaturesDetail = connect(

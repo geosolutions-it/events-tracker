@@ -18,6 +18,8 @@
 @ms-viewer-scrollbar-thumb-bg: @ms-main-variant-bg;
 @ms-viewer-scrollbar-thumb-hover-bg: @ms-main-hover-bg;
 
+@ms-viewer-table-row-hover-bg: #f3f0f0;
+
 #ms-components-theme(@themevars) {
     .ms-viewer-counters {
         .ms-viewer-counter {
@@ -64,6 +66,12 @@
         thead > tr > th {
             .background-color-var(@theme-vars[main-bg]);
             .border-bottom-color-var(@theme-vars[main-border-color]);
+        }
+        tr:hover {
+            cursor: pointer;
+            td {
+                background-color: @ms-viewer-table-row-hover-bg;
+            }
         }
     }
 

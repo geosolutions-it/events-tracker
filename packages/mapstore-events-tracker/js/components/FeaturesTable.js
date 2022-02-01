@@ -72,9 +72,11 @@ function FeaturesTable({
                             hashLocationToHref({
                                 location,
                                 query: {
-                                    feature: row.pct.value
+                                    feature: row.pct.value,
+                                    'feature-viz': 'detail'
                                 },
-                                noHash: true
+                                noHash: true,
+                                replaceQuery: true
                             })
                         )} key={idx} className={rowProps.selected ? 'info' : ''}>
                             <td>

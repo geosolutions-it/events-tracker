@@ -1,6 +1,6 @@
 {
   "name": "mapstore-events-tracker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mapstore project",
   "eslintConfig": {
     "extends": [

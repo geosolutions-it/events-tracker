@@ -8,6 +8,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import castArray from 'lodash/castArray';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { createPlugin } from '@mapstore/framework/utils/PluginsUtils';
@@ -41,14 +42,19 @@ function Header({
     const configuredItems = usePluginItems({ items, loadedPlugins });
     const dateFrom = dateRange?.from?.value && moment(dateRange.from.value).format(dateFormat);
     const dateTo = dateRange?.to?.value && moment(dateRange.to.value).format(dateFormat);
-    const selectedTheme = themeVariant === 'true' ? logo.find(entry => entry.theme === 'dark') : logo.find(entry => entry.theme === 'light');
+    const logos = castArray(logo);
+    const selectedTheme = (themeVariant === 'true'
+        ? logo.find(entry => entry.theme === 'dark')
+        : logo.find(entry => entry.theme === 'light'))
+        || logos[0];
+
     return (
         <div
             className="ms-viewer-header"
         >
             <div className="ms-viewer-header-left">
-                <a href={selectedTheme.href}>
-                    <img src={selectedTheme.src}/>
+                <a href={selectedTheme?.href}>
+                    <img src={selectedTheme?.src}/>
                 </a>
                 {titleId && <h1>
                     <Message msgId={titleId} />

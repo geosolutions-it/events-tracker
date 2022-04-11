@@ -20,13 +20,14 @@ export const hashLocationToHref = ({
     pathname,
     query,
     replaceQuery,
-    noHash
+    noHash,
+    overrideQuery = q => q
 }) => {
 
     const { search, ...loc } = location;
     const { query: locationQuery } = url.parse(search || '', true);
 
-    const newQuery = query
+    const newQuery = overrideQuery(query
         ? replaceQuery
             ? { ...locationQuery, ...query }
             : Object.keys(query).reduce((acc, key) => {
@@ -37,7 +38,7 @@ export const hashLocationToHref = ({
                     : currentQueryValues.filter(val => val !== value);
                 return { ...acc, [key]: queryValue };
             }, locationQuery)
-        : locationQuery;
+        : locationQuery);
 
     return `${noHash ? '' : '#'}${url.format({
         ...loc,

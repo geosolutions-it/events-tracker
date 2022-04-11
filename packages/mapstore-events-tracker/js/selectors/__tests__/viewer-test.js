@@ -262,7 +262,7 @@ describe('viewer selectors', () => {
                     '*': 0,
                     '@props': {
                         selected: false,
-                        selectedHref: '#?feature=1&feature=2'
+                        selectedHref: '#?feature=1&feature=2&feature-viz=detail'
                     }
                 }
             ],

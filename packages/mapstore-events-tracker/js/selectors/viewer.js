@@ -195,8 +195,14 @@ export const getTableData = (state) => {
                 selectedHref: hashLocationToHref({
                     location,
                     query: {
-                        feature: value
-                    }
+                        feature: value + '',
+                    },
+                    overrideQuery: parsedQuery => ({
+                        ...parsedQuery,
+                        ...(parsedQuery?.feature?.length > 0
+                            && parsedQuery.feature.includes(value + '')
+                            && { 'feature-viz': 'detail' })
+                    })
                 })
             }
         };

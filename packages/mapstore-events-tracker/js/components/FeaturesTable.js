@@ -23,7 +23,6 @@ import Number from '@mapstore/framework/components/I18N/Number';
 function FeaturesTable({
     data,
     numberParams,
-    location,
     onUpdateQuery
 }) {
     const {

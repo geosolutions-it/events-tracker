@@ -88,7 +88,8 @@ function getLayerConfig({
             const state = store.getState();
             const normalizer = getNormalizationValue(state);
             const features = computeClassifiedFeatures({
-                features: groupedFeatures,
+                // apply unique id to avoid issue in the react render cycle
+                features: groupedFeatures?.map((feature) => ({ id: uuid(), ...feature })),
                 classification: layer?.classification,
                 normalizer,
                 style: layer.style

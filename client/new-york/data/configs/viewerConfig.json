@@ -2,37 +2,32 @@
     "title": "New York - Crime Map",
     "url": "/geoserver/wfs",
     "featureTypeName": "new-york:event_full",
-    "defaultChartColor": "#0a5796",
+    "defaultChartColor": "#4575b4",
     "categories": [
         {
             "labelId": "msEventsTracker.categories.robbery",
             "value": "105",
-            "color": "#ff33aa"
+            "color": "#d73027"
         },
         {
             "labelId": "msEventsTracker.categories.felonyAssault",
             "value": "106",
-            "color": "#42b956"
-        },
-        {
-            "labelId": "msEventsTracker.categories.grandLarcenyOfMotorVehicle",
-            "value": "110",
-            "color": "#33aaff"
+            "color": "#fc8d59"
         },
         {
             "labelId": "msEventsTracker.categories.burglary",
             "value": "107",
-            "color": "#b16d46"
-        },
-        {
-            "labelId": "msEventsTracker.categories.murder",
-            "value": "101",
-            "color": "#6a46b1"
+            "color": "#fee090"
         },
         {
             "labelId": "msEventsTracker.categories.grandLarceny",
             "value": "109",
-            "color": "#ffaa33"
+            "color": "#e0f3f8"
+        },
+        {
+            "labelId": "msEventsTracker.categories.grandLarcenyOfMotorVehicle",
+            "value": "110",
+            "color": "#91bfdb"
         }
     ],
     "category": {
@@ -91,21 +86,15 @@
                         "domainExtent": false,
                         "normalize": true,
                         "normalizePropertyKey": "normalizedCount",
-                        "range": [
-                            "#fef6ee",
-                            "#fedec2",
-                            "#fec69d",
-                            "#f2aa86",
-                            "#d29a81"
-                        ],
+                        "range": "OrRd",
                         "stylePropertyKey": "fillColor"
                     },
                     "style": {
                         "fillColor": "#33ffaa",
                         "fillOpacity": 0.75,
-                        "color": "ffffff",
-                        "opacity": 0,
-                        "weight": 0
+                        "color": "#000000",
+                        "opacity": 0.25,
+                        "weight": 1
                     },
                     "viewParamsMap": {
                         "from": "min_mo",

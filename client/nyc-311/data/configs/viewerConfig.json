@@ -2,32 +2,47 @@
     "title": "New York - 311 SR Map",
     "url": "/geoserver/wfs",
     "featureTypeName": "nyc-311:event_full",
-    "defaultChartColor": "#0a5796",
+    "defaultChartColor": "#4575b4",
     "categories": [
+        {
+            "labelId": "msEventsTracker.categories.noise",
+            "value": "Noise",
+            "color": "#d73027"
+        },
+        {
+            "labelId": "msEventsTracker.categories.noiseCommercial",
+            "value": "Noise - Commercial",
+            "color": "#f46d43"
+        },
+        {
+            "labelId": "msEventsTracker.categories.noiseHelicopter",
+            "value": "Noise - Helicopter",
+            "color": "#fdae61"
+        },
+        {
+            "labelId": "msEventsTracker.categories.noiseHouseOfWorship",
+            "value": "Noise - House of Worship",
+            "color": "#fee090"
+        },
+        {
+            "labelId": "msEventsTracker.categories.noisePark",
+            "value": "Noise - Park",
+            "color": "#ffffbf"
+        },
         {
             "labelId": "msEventsTracker.categories.noiseResidential",
             "value": "Noise - Residential",
-            "color": "#ff33aa"
-        },
-        {
-            "labelId": "msEventsTracker.categories.illegalParking",
-            "value": "Illegal Parking",
-            "color": "#42b956"
+            "color": "#e0f3f8"
         },
         {
             "labelId": "msEventsTracker.categories.noiseStreet",
             "value": "Noise - Street/Sidewalk",
-            "color": "#33aaff"
+            "color": "#abd9e9"
         },
         {
-            "labelId": "msEventsTracker.categories.heat",
-            "value": "HEAT/HOT WATER",
-            "color": "#b16d46"
-        },
-        {
-            "labelId": "msEventsTracker.categories.blockedDriveway",
-            "value": "Blocked Driveway",
-            "color": "#6a46b1"
+            "labelId": "msEventsTracker.categories.noiseVehicle",
+            "value": "Noise - Vehicle",
+            "color": "#74add1"
         }
     ],
     "category": {
@@ -86,21 +101,15 @@
                         "domainExtent": false,
                         "normalize": true,
                         "normalizePropertyKey": "normalizedCount",
-                        "range": [
-                            "#fef6ee",
-                            "#fedec2",
-                            "#fec69d",
-                            "#f2aa86",
-                            "#d29a81"
-                        ],
+                        "range": "OrRd",
                         "stylePropertyKey": "fillColor"
                     },
                     "style": {
                         "fillColor": "#33ffaa",
                         "fillOpacity": 0.75,
-                        "color": "ffffff",
-                        "opacity": 0,
-                        "weight": 0
+                        "color": "#000000",
+                        "opacity": 0.25,
+                        "weight": 1
                     },
                     "viewParamsMap": {
                         "from": "min_mo",

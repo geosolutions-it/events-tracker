@@ -33,7 +33,13 @@
                 "illegalParking": "Illegal Parking",
                 "noiseStreet": "Noise - Street/Sidewalk",
                 "heat": "Heat/Hotwater",
-                "blockedDriveway": "Blocked Driveway"
+                "blockedDriveway": "Blocked Driveway",
+                "noise": "Noise",
+                "noiseCommercial": "Noise - Commercial",
+                "noiseHelicopter": "Noise - Helicopter",
+                "noiseHouseOfWorship": "Noise - House of Worship",
+                "noisePark": "Noise - Park",
+                "noiseVehicle": "Noise - Vehicle"
             },
             "mapVisualizations": {
                 "feature": "Community District Map",

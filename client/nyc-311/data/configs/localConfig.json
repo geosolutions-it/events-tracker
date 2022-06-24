@@ -8,6 +8,18 @@
         "translations",
         "ov-translations"
     ],
+    "initialState": {
+        "defaultState": {
+            "locales": {
+                "supportedLocales": {
+                    "en": {
+                        "code": "en-US",
+                        "description": "English"
+                    }
+                }
+            }
+        }
+    },
     "extensionsRegistry": "configs/extensions.json",
     "mapConstraints": {
         "crs": "EPSG:3857",

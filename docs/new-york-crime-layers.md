@@ -6,12 +6,13 @@ Reports locations of each event, with a type and a date expressed as a number in
 This layer ddirectly publishes the event table from the database.
 
 #### event.type
-  - Noise - Residential
-  - Illegal Parking
-  - Noise - Street/Sidewalk
-  - HEAT/HOT WATER
+  - 105 Robbery
+  - 106 Felony Assalt
+  - 107 Burglary
+  - 109 Grand Larceny
+  - 110 Grand Larceny of Motor Vehicle
 
-![event](img/311_event.png)
+![event](img/event.png)
 
 ### event_full
 
@@ -21,64 +22,64 @@ Same as event, but provides information about the region and the group name.
 
 The region, with name and population.
 
-![region](img/311_region.png)
+![region](img/region.png)
 
 
 ### event_region
 
 Reports the region, the event count, and the event count per 1000 inhabitants.
 
-![event region](img/311_event_region.png)
+![event region](img/event_region.png)
 
 This layer is a SQL view based on the ``event_region`` function. It accepts the following variables:
 
-* ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202112.
-* ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``. Defaults to 202101.
-* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'Noise - Residential', 'Illegal Parking', 'Noise - Street/Sidewalk', 'HEAT/HOT WATER', 'Blocked Driveway'``.
+* ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
+* ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
+* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'105', '106', '107', '109', '110'``.
 
 ### hex_cluster_ytd
 
 Reports a count of event in hexagonal areas.
 
-![hex cluster](img/311_hex_cluster_ytd.png)
+![hex cluster](img/new_york_hex_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
 * ``r``: the hexagon radius, defaults to ``0.003`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'Noise - Residential', 'Illegal Parking', 'Noise - Street/Sidewalk', 'HEAT/HOT WATER', 'Blocked Driveway'``.
+* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'105', '106', '107', '109', '110'``.
 
 ### point_cluster_ytd
 
 Clusters points over a regular grid, and reports for each grid cell the count of event, with a point whose position is the centroid of the event accumulated in the cell.
 
-![point cluster](img/311_point_cluster_ytd.png)
+![point cluster](img/new_york_point_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
 * ``r``: the cell width, defaults to ``0.005`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'Noise - Residential', 'Illegal Parking', 'Noise - Street/Sidewalk', 'HEAT/HOT WATER', 'Blocked Driveway'``.
+* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'105', '106', '107', '109', '110'``.
 
 ### square_cluster_ytd
 
 Clusters points over a regular grid, and reports for each grid cell the count of event.
 
-![square cluster](img/311_square_cluster_ytd.png)
+![square cluster](img/new_york_square_cluster_ytd.png)
 
 This layer is a SQL view and accepts the following variables:
 
 * ``r``: the cell width, defaults to ``0.005`` (in decimal degrees)
 * ``max_mo``: maximum month for time filters, expressed as ``YYYYmm``. Defaults to 202102.
 * ``min_mo``: minimum month for time filters, expressed as ``YYYYmm``
-* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'Noise - Residential', 'Illegal Parking', 'Noise - Street/Sidewalk', 'HEAT/HOT WATER', 'Blocked Driveway'``.
+* ``event_type``: comma separated list of event types, expressed as SQL strings. Defaults to ``'105', '106', '107', '109', '110'``.
 
 ### "_gt" views
 
 The layers ending with "_gt" are copies of the aggregating layers listed above, but provide for each aggregation unit
-a detail of event aggregated by type, rather than full count. The base layer and the one gruped by type typically share
+a detail of event aggregated by type, rather than full count. The base layer and the one grouped by type typically share
 some attributes to relate them with each other. For the ``event_region_gt`` the ``region.name`` attribute is the obvious choice.
 For others, which are grid based, a rounded coordinate or a grid row/col indication is provided instead.
 
@@ -90,9 +91,9 @@ This poses a challenge if one of the parameter values requires to use a comma. F
 
 Here is an example viewparam:
 
-``viewparams=mo_min:202012;mo_max:202101;event_type:%27Noise%20-%20Residential%27%5C,%27Illegal%20Parking%27``
+``viewparams=mo_min:202012;mo_max:202101;event_type:%27105%27%5C,%27106%27``
 
 It sets the following values:
 * ``mo_min``: ``202012``
 * ``mo_max``: ``202101``
-* ``event_type``: ``'Noise - Residential', 'Illegal Parking'``
+* ``event_type``: ``'105', '106'``

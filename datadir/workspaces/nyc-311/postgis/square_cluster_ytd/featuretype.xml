@@ -80,7 +80,7 @@ FROM (&#xd;
         </parameter>
         <parameter>
           <name>event_type</name>
-          <defaultValue>&apos;Noise - Residential&apos;, &apos;Illegal Parking&apos;, &apos;Noise - Street/Sidewalk&apos;, &apos;HEAT/HOT WATER&apos;, &apos;Blocked Driveway&apos;</defaultValue>
+          <defaultValue>&apos;Noise&apos;, &apos;Noise - Commercial&apos;, &apos;Noise - Helicopter&apos;, &apos;Noise - House of Worship&apos;, &apos;Noise - Park&apos;, &apos;Noise - Residential&apos;, &apos;Noise - Street/Sidewalk&apos;, &apos;Noise - Vehicle&apos;</defaultValue>
           <regexpValidator>^(&apos;[\w\s\-\/]+&apos;\s*,?\s*)+$</regexpValidator>
         </parameter>
         <parameter>

@@ -21,7 +21,7 @@ cd events-tracker/client
 Run the create script from with npx
 
 ```bash
-npx mapstore-events-tracker create ../my-project
+npx mapstore-events-tracker create ./my-project
 ```
 
 This script creates a new folder with all the needed static configuration that can be overrides to fit the needs of a specific dataset. The data/configs folder contains all the json files needed to configure the client with the correct layers and endpoints in GeoServer 
